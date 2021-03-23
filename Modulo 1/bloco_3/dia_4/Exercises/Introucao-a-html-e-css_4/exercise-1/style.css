@@ -10,6 +10,11 @@ nav {
   background-color: white;
   padding: 5px;
 }
+nav img {
+  margin-left: 350px;
+  width: 40px;
+  margin-top: 10px;
+}
 nav ul {
   float: right;
   margin-right: 350px;
@@ -23,8 +28,7 @@ nav ul li {
 }
 nav ul li:hover {
   font-weight: bold;
-  color: darkblue;
-  background-color: rgb(127, 255, 212, 0.5);
+  color: darkcyan;
 }
 main {
   margin-top: 100px;
