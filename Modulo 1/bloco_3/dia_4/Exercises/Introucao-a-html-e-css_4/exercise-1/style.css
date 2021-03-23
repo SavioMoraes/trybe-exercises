@@ -106,5 +106,32 @@ article img {
   display: inline-block;
   left: 300px;
   padding: 0 300px;
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
-
+ol {
+  font-size: 1.5em;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+ol dl {
+  color: rgb(0, 0, 0, 0.8);
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ol li a {
+  display: inline-block;
+  text-decoration: none;
+}
+iframe {
+  width: 700px;
+  height: 500px;
+  display: inline-block;
+  margin-left: 270px;
+  margin-bottom: 150px;
+}
+aside h2 {
+  text-align: center; 
+  margin-bottom: 80px;
+  margin-left: 80px;
+}
