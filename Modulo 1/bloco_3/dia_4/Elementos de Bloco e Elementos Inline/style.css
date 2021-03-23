@@ -1,0 +1,44 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+ul.awards {
+  margin-left: 330px;
+}
+
+ul li {
+  display: inline;
+  text-align: center;
+}
+
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  display: block;
+  margin-left: 530px;
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  display: inline-block;
+  margin-left: 330px;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  display: inline-block  ;
+}
