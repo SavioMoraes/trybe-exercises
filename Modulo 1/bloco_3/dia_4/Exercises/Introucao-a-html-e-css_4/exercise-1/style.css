@@ -1,6 +1,8 @@
 body {
   background-color: rgb(127, 255, 212, 0.5);
   margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 nav {
   width: 100%;
