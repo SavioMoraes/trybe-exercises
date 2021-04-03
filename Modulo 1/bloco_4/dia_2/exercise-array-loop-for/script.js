@@ -23,6 +23,7 @@ console.log(sum)
 
 /*
 let sum = 0;
+
 for (let i = 0; i < numbers.length; i += 1) {
   sum += numbers[i];
 }
@@ -36,6 +37,7 @@ console.log(average);
 
 /*
 let sum = 0;
+
 for (let i = 0; i < numbers.length; i += 1) {
   sum += numbers[i];
 }
@@ -87,6 +89,7 @@ if (oddValues === 0) {
 
 /*
 let lowerValue = 10000;
+
 for (let i = 0; i < numbers.length; i += 1) {
   if (numbers[i] < lowerValue) {
     lowerValue = numbers[i];
@@ -98,14 +101,13 @@ console.log(lowerValue);
 
 // Exercise 8
 
-
 result = []
+
 for (i = 1; i <= 25; i += 1) {
   result.push(i);
 }
 
 console.log(result);
-
 
 // Exercise 9
 
