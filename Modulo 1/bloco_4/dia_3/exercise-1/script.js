@@ -12,11 +12,9 @@ n = 5
 
 */
 
-let number = 5;
-for(let index = 1; index <= number; index += 1) {
-  if (number > 0) {
-      console.log('*'.repeat(index));
-  }else {
-    console.log('Invalid Number!')
+let n = 5;
+for(let index = 1; index <= n; index += 1 ) {
+  if (n > 1) {
+    console.log('*'.repeat(n));
   }
 }
