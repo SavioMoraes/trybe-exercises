@@ -1,10 +1,10 @@
 /*Usando o objeto abaixo, faça os exercícios a seguir:*/
 
 let info = {
-    personagem: 'Margarida',
-    origem: 'Pato Donald',
-    nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
-  };
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+};
 
 /* 1 - Imprima no console uma mensagem de boas-vindas para a personagem acima, incluindo seu nome.
 Valor esperado no console: Bem-vinda, Margarida*/
@@ -55,3 +55,23 @@ Namorada do personagem principal nos quadrinhos do Pato Donald e O último MacPa
 Ambos recorrentes // Atenção para essa última linha (fazer um if que retorne true e escreva 1ambaos recorrentes!)
 */
 
+let info = {
+  personagem: 'Margarida',
+  origem: 'Pato Donald',
+  nota: 'Namorada do personagem principal nos quadrinhos do Pato Donald',
+  recorrente: 'Sim',
+};
+let infoUncle = {
+  personagem: 'Tio Patinhas',
+  origem: "Christmas on Bear Mountain, Dell's Four Color Comics #178",
+  nota: 'O último MacPatinhas',
+  recorrente: 'Sim',
+};
+let recorrentes = '';
+if (info.recorrente === infoUncle.recorrente) {
+  recorrentes = 'Ambos recorrentes';
+}
+console.log(`${info.personagem} e ${infoUncle.personagem}`);
+console.log(`${info.origem} e ${infoUncle.origem}`);
+console.log(`${info.nota} e ${infoUncle.nota}`);
+console.log(`${recorrentes}`);
