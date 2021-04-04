@@ -19,3 +19,4 @@ function checkWord(word, ending) {
 
 console.log(checkWord('trybe', 'be'));
 console.log(checkWord('joaofernando', 'fernan'));
+
