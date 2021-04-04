@@ -5,6 +5,7 @@ Se a peça passada for inválida, o programa deve retornar uma mensagem de erro.
 Exemplo: bishop -> diagonals*/
 
 function chessPiecesMovements(chosenPiece) {
+
   let king = 'Uma única casa em qualquer direção';
   let queen = 'Quantas casas quiser na horizontal, vertical ou em diagonal';
   let bishop = 'Quantas casas quiser em diagonal';
@@ -13,21 +14,20 @@ function chessPiecesMovements(chosenPiece) {
   let pawn = 'Uma casa por vez na vertical e nas diagonais superiores para ganhar a peça do adversário';
   
   if (chosenPiece.toLowerCase() === 'rei') {
-    return king;
+    console.log(king);
   } else if (chosenPiece.toLowerCase() === 'rainha') {
-    return queen;
+    console.log(queen);
   } else if (chosenPiece.toLowerCase() === 'bispo') {
-    return bishop;
+    console.log(bishop);
   } else if (chosenPiece.toLowerCase() === 'cavalo') {
-    return horse;
+    console.log(horse);
   } else if (chosenPiece.toLowerCase() === 'torre') {
-    return tower;
+    console.log(tower);
   } else if (chosenPiece.toLowerCase() === 'peão') {
-    return pawn;
+    console.log(pawn);
   } else if (chosenPiece.toLowerCase() === 'peao') {
-    return pawn;
+    console.log(pawn);
   } else {
-    return '[ERORR!]';
+    console.log('[ERORR!]');
   }
 }
-console.log(chessPiecesMovements('rei'));
