@@ -4,12 +4,12 @@ Seu programa também deve emitir uma mensagem de erro e encerrar caso algum dos 
 O lucro de um produto é o resultado da subtração do valor de venda pelo custo do mesmo, sendo que o imposto de 20% também faz parte do valor de custo.
 valorCustoTotal = valorCusto + impostoSobreOCusto
 lucro = valorVenda - valorCustoTotal (lucro de um produto)*/
-
-let valorCusto = 100;
-let valorVenda = 200;
-let impostoSobreOCusto = valorCusto * 0.2;
-let valorCustoTotal = valorCusto + impostoSobreOCusto;
-let lucro = valorVenda - valorCustoTotal;
-console.log('O valor do lucro é: ' + lucro + '.');
-let lucroTotal = lucro * 1000;
-console.log('O lucro com a venda de mil unidades é: ' + lucroTotal + '.')
+function howMuchProfit(costValue, salePrice) {
+  let costTax = costValue * 0.2;
+  let totalCostValue = costValue + costTax;
+  let profit = salePrice - totalCostValue;
+  let totalProfit = profit * 1000;
+  return `O valor do lucro é ${profit}.
+O lucro com a venda de mil unidades é ${totalProfit}.`;
+}
+console.log(howMuchProfit(459, 899));
