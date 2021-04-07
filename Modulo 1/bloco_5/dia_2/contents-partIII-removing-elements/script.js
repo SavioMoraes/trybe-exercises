@@ -72,3 +72,5 @@ document.body.className = 'body';
 document.body.appendChild(pai);
 document.body.removeChild(paiDopai);
 
+let text = elementoOndeVoceEsta.nextSibling;
+pai.removeChild(text);
