@@ -40,20 +40,30 @@ image.className = 'small-image';
 
 // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 
-// let orderedList = document.createElement('ol');
-// rightContent.appendChild(orderedList);
-// let list = document.createElement('li');
-// orderedList.appendChild(list);
-// list[0].innerText = 'One';
-// list[1].innerText = 'Two';
-// list[2].innerText = 'Three';
-// list[3].innerText = 'Four';
-// list[4].innerText = 'Five';
-// list[5].innerText = 'Six';
-// list[6].innerText = 'Seven';
-// list[7].innerText = 'Eight';
-// list[8].innerText = 'Nine';
-// list[0].innerText = 'Ten';
+let orderedList = document.createElement('ol');
+orderedList.className = 'orderedlist';
+rightContent.appendChild(orderedList);
+let list = [
+  'One',
+  'two',
+  'Three',
+  'Four',
+  'Five',
+  'Six',
+  'Seven',
+  'Height',
+  'Nine',
+  'Ten'
+];
+
+for (index = 0; index < list.length; index += 1) {
+  let item = list[index];
+
+  let listItem = document.createElement('li');
+  listItem.innerText = item;
+
+  orderedList.appendChild(listItem);
+}
 
 // 9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 let firstH3 = document.createElement('h3');

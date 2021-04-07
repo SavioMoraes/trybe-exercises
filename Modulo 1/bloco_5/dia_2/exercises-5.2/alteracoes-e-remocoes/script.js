@@ -64,4 +64,22 @@ mainContent.appendChild(firstH3);
 mainContent.appendChild(secondH3);
 mainContent.appendChild(thirdH3);
 
+// Alterações e Remoções
+// 1 - Adicione a classe title na tag h1 criada;
+title.className = 'title';
 
+// 2 - Adicione a classe description nas 3 tags h3 criadas;
+firstH3.className = 'description'; 
+secondH3.className = 'description';
+thirdH3.className = 'description';
+
+// 3 - Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild();
+let removeLeftContent = mainContent.removeChild(leftContent);
+
+// 4 - Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div ;
+rightContent.style.marginRight = 'auto';
+
+// 5 - Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde;
+mainContent.style.backgroundColor = 'green';
+
+// 6 - Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
