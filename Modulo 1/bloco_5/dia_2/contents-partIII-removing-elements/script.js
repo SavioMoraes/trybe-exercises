@@ -57,6 +57,7 @@ let quartoEUltimoFilho = document.querySelector('#quartoEUltimoFilho');
 let terceiroFilho = document.querySelector('#terceiroFilho');
 let segundoEUltimoFilhoDoFilho = document.querySelector('#segundoEUltimoFilhoDoFilho');
 let primeiroFilho = document.querySelector('#primeiroFilho');
+let paiDopai = document.querySelector('#paiDoPai');
 
 
 let removeBrother = pai.removeChild(brother);
@@ -66,3 +67,8 @@ let removeOndeVoceEstaJr = elementoOndeVoceEsta.removeChild(ondeVoceestaJr);
 let removeSegundoEUltimoFilhoDoFilho = elementoOndeVoceEsta.removeChild(segundoEUltimoFilhoDoFilho);
 let removeBisnetoDoPai = primeiroFilhoDoFilho.removeChild(bisnetoDoPai);
 let removePrimeiroFilho = pai.removeChild(primeiroFilho);
+
+document.body.className = 'body';
+document.body.appendChild(pai);
+document.body.removeChild(paiDopai);
+
