@@ -39,19 +39,29 @@ image.src = 'https://picsum.photos/200';
 image.className = 'small-image';
 
 // 8 - Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
-let orderedList = document.createElement('ol');
-rightContent.appendChild(orderedList);
-let list = document.createElement('li');
-orderedList.appendChild(list);
-list[0].innerText = 'One';
-list[1].innerText = 'Two';
-list[2].innerText = 'Three';
-list[3].innerText = 'Four';
-list[4].innerText = 'Five';
-list[5].innerText = 'Six';
-list[6].innerText = 'Seven';
-list[7].innerText = 'Eight';
-list[8].innerText = 'Nine';
-list[0].innerText = 'Ten';
+
+// let orderedList = document.createElement('ol');
+// rightContent.appendChild(orderedList);
+// let list = document.createElement('li');
+// orderedList.appendChild(list);
+// list[0].innerText = 'One';
+// list[1].innerText = 'Two';
+// list[2].innerText = 'Three';
+// list[3].innerText = 'Four';
+// list[4].innerText = 'Five';
+// list[5].innerText = 'Six';
+// list[6].innerText = 'Seven';
+// list[7].innerText = 'Eight';
+// list[8].innerText = 'Nine';
+// list[0].innerText = 'Ten';
 
 // 9 - Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+let firstH3 = document.createElement('h3');
+let secondH3 = document.createElement('h3');
+let thirdH3 = document.createElement('h3');
+
+mainContent.appendChild(firstH3);
+mainContent.appendChild(secondH3);
+mainContent.appendChild(thirdH3);
+
+
