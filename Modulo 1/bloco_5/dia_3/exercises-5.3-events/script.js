@@ -154,3 +154,18 @@ function dayMouseOut() {
 
 dayMouseOver();
 dayMouseOut();
+
+/*
+  Exercício 7: Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+    -O elemento criado deverá ser adicionado como filho/filha da tag <div> que possui a classe "my-tasks".
+*/
+function newTaskSpan(task) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let taskName = document.createElement('span');
+
+  taskName.innerHTML = task;
+  tasksContainer.appendChild(taskName);
+};
+
+newTaskSpan('Projeto:');
