@@ -58,10 +58,11 @@ insertMonthDays();
     -Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
 */
 function createButtonsHoliday(str) {
-  const buttonHoliday = document.createElement('button');
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let buttonHoliday = document.createElement('button');
+  let buttonHolidayID = 'btn-holiday';
   buttonHoliday.innerHTML = str;
-  buttonHoliday.id = 'btn-holiday';
-  const buttonsContainer = document.querySelector('.buttons-container');
+  buttonHoliday.id = buttonHolidayID;  
   buttonsContainer.appendChild(buttonHoliday);
 }
 createButtonsHoliday('Feriados');
@@ -71,11 +72,42 @@ createButtonsHoliday('Feriados');
 
     -É interessante que este botão possua também a lógica inversa. Ao ser clicado novamente ele retorna à configuração inicial com a cor "rgb(238,238,238)" .
 */
-// const dezHoliday = 0;
-// function addEventClickInButton(event) {
-//   buttonHoliday.addEventClickInButton('click', function() {    
-//      if () {
+function addEventClickInButtonHoliday() {
+  let getButtonHoliday = document.querySelector('#btn-holiday');
+  let getHolydays = document.querySelectorAll('.holiday');
+  let backgroundColor = 'rgb(238,238,238)';
+  let setNewColor = 'white';
 
-//      }
-//    });
-// }
+  getButtonHoliday.addEventListener('click', function() {
+    for (let index = 0; index < getHolydays.length; index += 1) {
+      if (getHolydays[index].style.backgroundColor === setNewColor) {
+        getHolydays[index].style.backgroundColor = backgroundColor;
+      } else {
+        getHolydays[index].style.backgroundColor = setNewColor;
+      }
+    }
+  });
+}
+addEventClickInButtonHoliday();
+
+/*
+  Exercício 4: Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+
+    -Adicione a este botão o ID "btn-friday" .
+
+    -Adicione este botão como filho/filha da tag <div> com classe "buttons-container" .
+*/
+function createFridayButton(str) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let newButtonFriday = document.createElement('button');
+  let newButtonFridayId = 'btn-friday';
+
+  newButtonFriday.innerHTML = str;
+  newButtonFriday.id = newButtonFridayId;
+  buttonsContainer.appendChild(newButtonFriday);
+}
+createFridayButton('Sexta-Feira');
+
+/*
+  
+*/
