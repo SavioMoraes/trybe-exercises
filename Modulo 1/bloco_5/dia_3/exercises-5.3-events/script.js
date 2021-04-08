@@ -22,15 +22,30 @@ function createDaysOfTheWeek() {
     
     -Os dias 4, 11, 18 e 25 são Sexta-feira. Eles devem conter a classe day e a classe friday. Ex: <li class="day friday">4</li>
 */
-const dezDays = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-const dezDaysList = document.querySelector('#days');
+let dezDays = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+let dezDaysList = document.querySelector('#days');
 function insertMonthDays() {
-  
   for (let index = 0; index < dezDays.length; index += 1) {
-    const day = dezDays[index];
-    const dezListIem = document.createElement('li');
-    dezListIem.innerHTML = day;
-    dezDaysList.appendChild(dezListIem);
+    let day = dezDays[index];
+    let dezListIem = document.createElement('li');
+    if (day === 24|| day === 31) {
+      dezListIem.className = 'day holiday';
+      dezListIem.innerHTML = day;
+      dezDaysList.appendChild(dezListIem);
+    } else if (day === 4 || day === 11 || day === 18) {
+      dezListIem.className = 'day friday';
+      dezListIem.innerHTML = day;
+      dezDaysList.appendChild(dezListIem); 
+    } else if (day === 25) {
+      dezListIem.className = 'day holiday friday';
+      dezListIem.innerHTML = day;
+      dezDaysList.appendChild(dezListIem);
+    } else {
+      dezListIem.className = 'day';
+      dezListIem.innerHTML = day;
+      dezDaysList.appendChild(dezListIem);
+    }
+    
   }
 }
 insertMonthDays();
