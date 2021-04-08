@@ -130,3 +130,27 @@ function displayFridays(fridaysArray) {
 }
 let dezFridays = [4, 11, 18, 25];
 displayFridays(dezFridays);
+
+/*
+  Exercício 6: Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+*/
+function dayMouseOver() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseover', function(event) {
+    event.target.style.fontSize = '30px';
+    event.target.style.fontWeight = '600';
+  })
+};
+
+function dayMouseOut() {
+  let days = document.querySelector('#days');
+
+  days.addEventListener('mouseout', function(event) {
+    event.target.style.fontWeight = '200';
+    event.target.style.fontSize = '20px';
+  })
+};
+
+dayMouseOver();
+dayMouseOut();
