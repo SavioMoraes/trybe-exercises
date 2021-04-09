@@ -176,6 +176,8 @@ newTaskSpan('Projeto:');
 */
 function newTaskDiv(color) {
 
+  // CONSERTAR ESSA FUNÇAO, POIS ESTÁ ADICIONANDO A SPAN AO LADO UMA DA OUTRA AO INVÉS DE EMBAIXO!!!!!!!!
+  
   let tasksContainer = document.querySelector('.my-tasks');
   let newTask = document.createElement('div');
 
