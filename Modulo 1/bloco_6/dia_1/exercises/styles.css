@@ -27,7 +27,7 @@ body {
 
 .title h1 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .title p {
@@ -47,7 +47,16 @@ body {
   margin-bottom: 15px;
 }
 
-.form-row input {
+.form-row label {
+  margin-left: 8px;
+  margin-bottom: 50px;
+}
+
+.line-content {
+  margin: 12px;
+}
+
+.line-content input {
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(214, 217, 220);
   border-radius: 3px;
@@ -56,11 +65,10 @@ body {
   font-size: 14px;
 }
 
-.form-row label {
-  margin-left: 8px;
-  margin-bottom: 50px;
+.checked {
+  margin: 40px 12px;
 }
 
-.line-content {
-  margin: 20px;
+.checked input {
+  margin-left: 20px;
 }
