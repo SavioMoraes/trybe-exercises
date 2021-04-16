@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="visewport" content="width=device-width, initial-scale=1.0">
+  <title>Criando um formulário de currículo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="title">
+    <h1>Curriculum Vitae</h1>
+    <p><em>Cadastre seu currículo preenchendo o formulário a seguir:</em></p>
+  </header>
+  <form action="" method="GET" class="form-curriculum">
+    <div class="form-row">
+      <fieldset>
+        <div class="line-content"></div>
+          <legend>Dados pessoais:</legend>
+          <label for="name">Nome:
+            <input type="text" name="full-name" id="name" maxlength="40" placeholder="Digite seu nome completo" required>
+          </label>
+          <label for="email">Email:
+            <input type="email" name="e-mail" id="email" maxlength="50" placeholder="Digite seu email" required>
+          </label>
+          <label for="cpf">CPF:
+            <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Digite seu CPF - Somente números!" required>
+          </label>
+          <label for="address">Endereço:
+            <input type="text" name="address" id="address" maxlength="200" placeholder="Digite seu logradouro" required>
+          </label>
+          <label for="city">Cidade:
+            <input type="text" name="city" id="city" maxlength="28" placeholder="Digite o neme de sua cidade atual" required>
+          </label>
+          <label for="state">Estado:
+            <select name="state" id="state" required>
+            </select>
+          </label>
+          <br><br>
+          <div>
+            <label for="house-apartment">Tipo de imóvel: </label>
+            <br>
+            <input type="radio" name="house-apartment" id="house" value="house" required> <span>Casa</span>
+            <input type="radio" name="house-apartment" id="apartment" value="apartment" required > <span>Apartamento</span>
+          </div>
+          </fieldset>
+        </div>
+      </fieldset>
+    </div>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>

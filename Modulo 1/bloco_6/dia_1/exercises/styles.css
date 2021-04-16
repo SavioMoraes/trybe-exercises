@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(93, 96, 99);
+  background-color: rgb(234, 237, 240);
+  font-family: Helvetica, Arial, sans-serif; 
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px auto; /*substitui margin-left e margin-right: auto*/
+  padding: 50px;
+  /* margin-left: auto;
+  margin-left: auto; */
+}
+
+.title h1 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.title p {
+  font-weight: 600;
+}
+
+.form-curriculum {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px auto;
+  padding: 50px;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row input {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row label {
+  margin-left: 8px;
+  margin-bottom: 50px;
+}
+
+.line-content {
+  margin: 20px;
+}
