@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(93, 96, 99);
+  background-color: rgb(234, 237, 240);
+  font-family: Helvetica, Arial, sans-serif; 
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.title {
+  text-align: center;
+  font-style: italic;
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px auto 0; /*substitui margin-left e margin-right: auto*/
+  padding: 50px;
+  /* margin-left: auto;
+  margin-left: auto; */
+}
+
+.title h1 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.title p {
+  font-weight: 600;
+}
+
+.cv-form {
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 5px auto 0;
+  padding: 50px;
+}
+
+.form-row {
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  margin-left: 8px;
+  margin-bottom: 50px;
+}
+
+.line-content {
+  margin: 12px;
+}
+
+.line-content input {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.checked {
+  margin: 40px 12px;
+}
+
+.checked input {
+  margin-left: 20px;
+}
+
+.line-content textarea {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 98.5%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  width: 100px;
+  text-align: center;
+}
