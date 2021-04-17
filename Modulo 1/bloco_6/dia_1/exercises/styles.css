@@ -19,7 +19,7 @@ body {
   border: 1px solid rgb(214, 217, 220);
   border-radius: 3px;
   width: 80%;
-  margin: 40px auto; /*substitui margin-left e margin-right: auto*/
+  margin: 40px auto 0; /*substitui margin-left e margin-right: auto*/
   padding: 50px;
   /* margin-left: auto;
   margin-left: auto; */
@@ -34,12 +34,12 @@ body {
   font-weight: 600;
 }
 
-.form-curriculum {
+.cv-form {
   background-color: rgb(246, 247, 248);
   border: 1px solid rgb(214, 217, 220);
   border-radius: 3px;
   width: 80%;
-  margin: 40px auto;
+  margin: 5px auto 0;
   padding: 50px;
 }
 
@@ -71,4 +71,21 @@ body {
 
 .checked input {
   margin-left: 20px;
+}
+
+.line-content textarea {
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 98.5%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+button {
+  margin-top: 20px;
+  margin-right: 20px;
+  padding: 3px;
+  width: 100px;
+  text-align: center;
 }

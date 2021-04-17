@@ -14,24 +14,23 @@
     <h1>Curriculum Vitae</h1>
     <p><em>Cadastre seu currículo preenchendo o formulário a seguir:</em></p>
   </header>
-  <form action="" method="GET" class="form-curriculum">
+  <form class="cv-form">
     <div class="form-row">
       <fieldset>
         <legend>Dados pessoais:</legend>
         <div class="line-content">
           <label for="name">Nome:
-            <input type="text" name="full-name" id="name" maxlength="40" placeholder="Digite seu nome completo"
-              required>
+            <input type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome completo" required>
           </label>
         </div>
         <div class="line-content">
           <label for="email">Email:
-            <input type="email" name="e-mail" id="email" maxlength="50" placeholder="Digite seu email" required>
+            <input class="email-input" type="email" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
           </label>
         </div>
         <div class="line-content">
-          <label for="cpf">CPF:
-            <input type="text" name="cpf" id="cpf" maxlength="11" placeholder="Digite seu CPF - Somente números!"
+          <label for="cpf-number">CPF:
+            <input type="text" name="cpf" id="cpf-number" maxlength="11" placeholder="Digite seu CPF - Somente números!"
               required>
           </label>
         </div>
@@ -42,25 +41,51 @@
         </div>
         <div class="line-content">
           <label for="city">Cidade:
-            <input type="text" name="city" id="city" maxlength="28" placeholder="Digite o neme de sua cidade atual"
-              required>
+            <input type="text" name="city" id="city" maxlength="200" placeholder="Digite o neme de sua cidade atual" required>
           </label>
         </div>
         <div class="line-content">
           <label for="state">Estado:
-            <select name="state" id="state" required>
+            <select name="state" id="state" value = "" required>
             </select>
           </label>
         </div>
         <div class="checked">
           <label for="house-apartment">Tipo de imóvel: </label>
-          <input type="radio" name="house-apartment" id="house-apartment" value="house" required> <span>Casa</span>
-          <input type="radio" name="house-apartment" id="house-apartment" value="apartment" required>
+          <input type="radio" name="house-apartment" id="house" value="house" required> <span>Casa</span>
+          <input type="radio" name="house-apartment" id="apartment" value="apartment" required>
           <span>Apartamento</span>
         </div>
       </fieldset>
+      <br>
+      <fieldset>
+        <legend>Resumo do currículo:</legend>
+        <div class="line-content">
+          <label for="cv-resume"></label>
+          <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="100" rows="20" placeholder="Escreva o resumo do seu currículo nesta área..." required></textarea>
+        </div>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>Últimos trabalhos:</legend>
+        <div class="line-content">
+          <label for="position">Cargo: </label>
+          <input type="text" name="position" id="position" maxlength="40" required >
+        </div>
+        <div class="line-content">
+          <label for="description">Descrição do cargo: </label>
+          <input type="text" id="description" name="description" required>
+        </div>
+        <div class="line-content">
+          <label for="start-date">Data de início: </label>
+          <input type="text" class="input-data" name="start-date" value="" required>
+        </div>
+      </fieldset>
+      <button class="submit-button" type="button">Enviar</button>
+      <button class="clear-button" type="button">Limpar</button>
     </div>
   </form>
+  <section class="form-data"></section>
   <script src="script.js"></script>
 </body>
 
