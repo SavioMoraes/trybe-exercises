@@ -1,11 +1,11 @@
 const states = document.querySelector('#state');
 function createStateOptions() {
-  const stateOptions = ['Selecione seu Estado', 'Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernanbuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondôna', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
+  const stateOptions = ['', 'Acre', 'Alagoas', 'Amapá', 'Amazonas', 'Bahia', 'Ceará', 'Distrito', 'Espírito Santo', 'Goiás', 'Maranhão', 'Mato Grosso', 'Mato Grosso do Sul', 'Minas Gerais', 'Pará', 'Paraíba', 'Paraná', 'Pernanbuco', 'Piauí', 'Rio de Janeiro', 'Rio Grande do Norte', 'Rio Grande do Sul', 'Rondôna', 'Roraima', 'Santa Catarina', 'São Paulo', 'Sergipe', 'Tocantins'];
 
   for (let index = 0; index < stateOptions.length; index += 1) {
     const createOptions = document.createElement('option');
     states.appendChild(createOptions).innerText = stateOptions[index];
-    states.appendChild(createOptions).value = stateOptions[index];
+    states.appendChild(createOptions).value = stateOptions[index];  
   }
 }
 
@@ -80,6 +80,6 @@ const submitButton = document.querySelector('.submit-button');
 submitButton.addEventListener('click', renderCurriculum);
 clearButton.addEventListener('click', clearFields);
 
-window.onload = function () {
+window.onload = function() {
   createStateOptions();
 }

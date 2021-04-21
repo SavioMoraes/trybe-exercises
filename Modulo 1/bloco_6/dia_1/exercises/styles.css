@@ -12,7 +12,7 @@ body {
   line-height: 1.5;
 }
 
-.title {
+.form-header {
   text-align: center;
   font-style: italic;
   background-color: rgb(246, 247, 248);
@@ -25,12 +25,12 @@ body {
   margin-left: auto; */
 }
 
-.title h1 {
+.form-header h1 {
   font-size: 30px;
   margin-bottom: 5px;
 }
 
-.title p {
+.form-header p {
   font-weight: 600;
 }
 
