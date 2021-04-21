@@ -1,54 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="visewport" content="width=device-width, initial-scale=1.0">
-  <title>Criando um formulário de currículo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <title>Criando um formulário de currículo</title>
 </head>
-
 <body>
-  <header class="title">
-    <h1>Curriculum Vitae</h1>
-    <p><em>Cadastre seu currículo preenchendo o formulário a seguir:</em></p>
+  <header class="form-header">
+    <h1>Formulário para cadastro de currículo</h1>
+    <p>Preencha o campos abaixo.</p>
   </header>
   <form class="cv-form">
     <div class="form-row">
       <fieldset>
-        <legend>Dados pessoais:</legend>
+        <legend>Dados Pessoasis:</legend>
         <div class="line-content">
-          <label for="name">Nome:
+          <label for="name">Nome:</label>
             <input type="text" name="name" id="name" maxlength="40" placeholder="Digite seu nome completo" required>
-          </label>
         </div>
         <div class="line-content">
-          <label for="email">Email:
+          <label for="email">Email:</label>
             <input class="email-input" type="email" name="email" id="email" maxlength="50" placeholder="Digite seu email" required>
-          </label>
         </div>
         <div class="line-content">
-          <label for="cpf-number">CPF:
+          <label for="cpf-number">CPF:</label>
             <input type="text" name="cpf" id="cpf-number" maxlength="11" placeholder="Digite seu CPF - Somente números!"
               required>
-          </label>
         </div>
         <div class="line-content">
-          <label for="address">Endereço:
+          <label for="address">Endereço:</label>
             <input type="text" name="address" id="address" maxlength="200" placeholder="Digite seu logradouro" required>
-          </label>
         </div>
         <div class="line-content">
-          <label for="city">Cidade:
+          <label for="city">Cidade:</label>
             <input type="text" name="city" id="city" maxlength="200" placeholder="Digite o neme de sua cidade atual" required>
-          </label>
         </div>
         <div class="line-content">
-          <label for="state">Estado:
+          <label for="state">Estado:</label>
             <select name="state" id="state" value = "" required>
             </select>
-          </label>
         </div>
         <div class="checked">
           <label for="house-apartment">Tipo de imóvel: </label>
@@ -59,13 +51,12 @@
       </fieldset>
       <br>
       <fieldset>
-        <legend>Resumo do currículo:</legend>
+        <legend>Resumo do Currículo</legend>
         <div class="line-content">
           <label for="cv-resume"></label>
           <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="100" rows="20" placeholder="Escreva o resumo do seu currículo nesta área..." required></textarea>
         </div>
       </fieldset>
-      <br>
       <fieldset>
         <legend>Últimos trabalhos:</legend>
         <div class="line-content">
@@ -81,12 +72,11 @@
           <input type="text" class="input-data" name="start-date" value="" required>
         </div>
       </fieldset>
-      <button class="submit-button" type="button">Enviar</button>
+      <button type="button" class="submit-button">Enviar</button>
       <button class="clear-button" type="button">Limpar</button>
     </div>
   </form>
   <section class="form-data"></section>
   <script src="script.js"></script>
 </body>
-
 </html>
