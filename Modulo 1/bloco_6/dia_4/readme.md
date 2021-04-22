@@ -1,0 +1,1 @@
+Diretorio para a pratica do conteudo e resolucao dos exercicios do bloco 6.4 - Flexbox - Parte 2
