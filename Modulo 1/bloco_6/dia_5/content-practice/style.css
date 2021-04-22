@@ -71,6 +71,10 @@ p strong {
   .card:nth-of-type(1) {
     display: flex;
   }
+
+  p.trick {
+    background-color: black;
+  }
 }
 
 @media screen and (min-width: 600px) and (max-width: 1000px) {
