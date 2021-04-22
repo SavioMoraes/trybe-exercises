@@ -1,0 +1,1 @@
+Os exercicios deste bloco serao realizados em fork realizado em exercise-tech-gallery dentro do diretorio fork no diretorio Trybe
