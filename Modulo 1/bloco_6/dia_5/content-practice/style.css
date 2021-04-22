@@ -79,3 +79,8 @@ p strong {
   }
 }
 
+@media not screen and (min-width: 650px) and (max-width: 950px) {
+  .card:nth-of-type(3) {
+    display: none;
+  }
+}
