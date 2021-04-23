@@ -80,3 +80,37 @@
   padding: 20px;
   height: 1%;
 }
+
+@media print {
+  #header,
+  #navigation,
+  #footer {
+    display: none;
+  }
+
+  h2,
+  img {
+    padding-bottom: 30px;
+  }
+
+  #content {
+    width: 100%;
+    margin: 0 5%;
+    padding: 20px 0;
+  }
+
+  #content > p {
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+  }
+
+  #aside {
+    float: none;
+    display: flex;
+    flex-direction: column;
+    page-break-inside: avoid;
+  }
+
+}
