@@ -1,1 +1,0 @@
-Este diretorio recebera a pratica do conteudo parte 2 do bloco 7
