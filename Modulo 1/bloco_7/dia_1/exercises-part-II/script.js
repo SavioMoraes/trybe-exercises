@@ -44,7 +44,7 @@ console.log(longestWord("Antonio foi no banheiro e não sabemos o que aconteceu"
 
 // Exercício 3 - arquivo index.html
 
-// Exercício 4
+// Exercício 4 - ?
 
 const array = ["Android", "iOS", "Architecture", "Teach", "Run"];
 
