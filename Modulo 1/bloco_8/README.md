@@ -1,1 +1,1 @@
-Este diretório receberá a prática do conteúdo e os exercícios do bloco 8 - Higher Order Functions do JavaScript ES6
+Este diretório receberá a prática do conteúdo e os exercícios do dia 1 do bloco 8 - JavaScript ES6 - Introdução a Higher Order Functions
