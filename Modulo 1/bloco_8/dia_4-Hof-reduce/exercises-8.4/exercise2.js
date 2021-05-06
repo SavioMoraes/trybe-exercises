@@ -66,7 +66,7 @@ const books = [
 ];
 
 function allNames() {
-  // escreva seu código aqui
+  
 }
 
 assert.deepStrictEqual(allNames(), 'Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.');
