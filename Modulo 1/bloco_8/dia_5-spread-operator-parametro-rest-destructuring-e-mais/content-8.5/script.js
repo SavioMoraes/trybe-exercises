@@ -15,23 +15,23 @@
 // console.log(y); // 2
 // console.log(z); // 0
 
-// const getNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
+const getNationality = ({ firstName, nationality }) => `${firstName} is ${nationality}`;
 
-// let person = {
-//     firstName: 'João',
-//     lastName: 'Jr II',
-// };
+const person = {
+    firstName: 'João',
+    lastName: 'Jr II',
+};
 
-// let {firstName, lastName, nationality = 'Brazilian',} = person; 
+const { firstName, nationality = 'Brazilian', } = person; 
 
-// const otherPerson = {
-//     firstName: 'Ivan',
-//     lastName: 'Ivanovich',
-//     nationality: 'Russian',
-// };
+const otherPerson = {
+    firstName: 'Ivan',
+    lastName: 'Ivanovich',
+    nationality: 'Russian',
+};
 
-// console.log(getNationality(otherPerson)); // Ivan is Russian
-// console.log(getNationality(person)); // não consegui
+console.log(getNationality(otherPerson)); // Ivan is Russian
+console.log(getNationality(person)); // não consegui
 
 // const getPosition = (latitude, longitude) => ({
 //   latitude,
@@ -39,7 +39,7 @@
 
 // console.log(getPosition(-19.8157, -43.9542));
 
-const multiply = (number, value = 1) => number * value;
+// const multiply = (number, value = 1) => number * value;
 
-console.log(multiply(8));
-console.log(multiply(8, 4));
+// console.log(multiply(8));
+// console.log(multiply(8, 4));
