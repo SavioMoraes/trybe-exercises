@@ -78,5 +78,4 @@ const additionalItens = ['Melancia', 'Laranja', 'Banana', 'Manga'];
 // console.log(saladaDeFruta); // com essas duas linhas dá certo o exercício!
 
 const fruitSalad = (fruit, additional) => [...fruit, ...additional];
-
 console.log(fruitSalad(specialFruit, additionalItens));
