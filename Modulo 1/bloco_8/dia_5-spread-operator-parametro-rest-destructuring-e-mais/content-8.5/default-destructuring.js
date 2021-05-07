@@ -45,4 +45,4 @@ const otherPerson = {
 
 
 console.log(getNationality(otherPerson)); // Ivan is Russian
-console.log(getNationality(person));
+console.log(getNationality(person)); // João is Brazilian
