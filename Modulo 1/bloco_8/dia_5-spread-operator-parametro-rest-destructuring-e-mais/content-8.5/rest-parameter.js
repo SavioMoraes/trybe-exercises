@@ -10,3 +10,9 @@ console.log(quantosParams('string', null, [1, 2, 3], { })); // Você passou 4 pa
 
 const sum = (...args) => args.reduce((accumulator, current) => accumulator + current, 0);
 console.log(sum(4, 7, 8, 9, 60)); // 88
+console.log(sum(4, 7, 8, 9, 60, 2, 10)); // 100
+console.log(sum(45, 3, 2, -50)); // 0
+console.log(sum(-500, 100, 145)); // -255
+
+//----------------------------------------------------------------------------
+
