@@ -68,18 +68,15 @@ console.log(customer); /* {
   occupation: 'Developer'
 } */
 
-//--------------------------------------------------------------------------
-                      // NÃO ENTENDI !!!
-//--------------------------------------------------------------------------
 // Faça uma lista com as suas frutas favoritas
-const specialFruit = ['Kiwi', 'Morango', 'Maça'];
+const specialFruit = ['Kiwi', 'Morango', 'Maça', 'Uva'];
 
 // Faça uma lista de complementos que você gostaria de adicionar
-const additionalItens = ['Melancia', 'Laranja', 'Banana'];
+const additionalItens = ['Melancia', 'Laranja', 'Banana', 'Manga'];
 
-const fruitSalad = (fruit, additional) => {
-  // Esreva sua função aqui
-  return fruit + additional;
-};
+// const saladaDeFruta = [...specialFruit, ...additionalItens];
+// console.log(saladaDeFruta); // com essas duas linhas dá certo o exercício!
 
-console.log(fruitSalad(...specialFruit, ...additionalItens));
+const fruitSalad = (fruit, additional) => [...fruit, ...additional];
+
+console.log(fruitSalad(specialFruit, additionalItens));
