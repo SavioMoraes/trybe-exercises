@@ -1,18 +1,18 @@
-const sum = require('./exercicio01');
+const { sum } = require('./exercicio01');
 const { test, expect, describe } = require('@jest/globals');
 
 describe('a função sum', () => {
   test('sum is function', () => {
-    expect(typeof sum.sum).toBe('function');
+    expect(typeof sum).toBe('function');
   });
   test('sums two values', () => {
-    expect(sum.sum(2, 3)).toEqual(5);
+    expect(sum(2, 3)).toEqual(5);
   });
   it('sums two values', () => {
-    expect(sum.sum(4, 5)).toEqual(9);
+    expect(sum(4, 5)).toEqual(9);
   });
   it('sums two values', () => {
-    expect(sum.sum(0, 0)).toEqual(0);
+    expect(sum(0, 0)).toEqual(0);
   });
 });
 
