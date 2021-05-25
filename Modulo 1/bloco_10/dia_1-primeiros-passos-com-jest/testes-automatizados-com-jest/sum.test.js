@@ -1,6 +1,6 @@
 const sum = require('./sum');
 const number = require('./numberIsStrictEqual');
-const arr = require('./arrayAndObject');
+const { arr, obj } = require('./arrayAndObject');
 // const obj = require('./arrayAndObject');
 
 test('sums two values', () => {
@@ -25,5 +25,5 @@ test('array and object equality', () => {
   // expect(arr).toBe([1, 2, 3]); // fails
   // expect(obj).toBe({ a: 1, b: 2, c: 3}); // fails
   expect(arr).toEqual([1, 2, 3]); // OK
-  // expect(obj).toEqual({ a: 1, b: 2, c: 3}); // OK
+  expect(obj).toEqual({ a: 1, b: 2, c: 3}); // OK
 });
