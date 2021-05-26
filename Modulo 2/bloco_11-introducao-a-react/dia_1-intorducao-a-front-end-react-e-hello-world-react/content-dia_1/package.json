@@ -1,0 +1,12 @@
+{
+  "name": "content-dia_1",
+  "version": "1.0.0",
+  "description": "Prática do conteúdo do Bloco_11.1 :school::house::pencil:",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
