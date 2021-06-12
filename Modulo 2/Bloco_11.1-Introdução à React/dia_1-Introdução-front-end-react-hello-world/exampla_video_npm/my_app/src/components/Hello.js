@@ -1,9 +1,17 @@
 import React from 'react'
 
 class Hello extends React.Component {
+  
   render() {
+    
+function helloJSX () {
+  return 'Hello, JSX';
+}
+    
     return (
-      <h1>Hello World por componente!</h1>
+      <div>
+        { helloJSX() }
+      </div>
     )
   }
 }
