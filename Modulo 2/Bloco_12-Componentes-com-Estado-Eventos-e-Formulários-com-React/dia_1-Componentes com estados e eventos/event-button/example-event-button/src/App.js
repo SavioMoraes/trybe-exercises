@@ -5,22 +5,40 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      numeroDeCliques: 0
+      numeroDeCliquesSavio: 0,
+      numeroDeCliquesNoah: 0,
+      numeroDeCliquesThor: 0,
     }
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClickSavio = this.handleClickSavio.bind(this);
+    this.handleClickNoah = this.handleClickNoah.bind(this);
+    this.handleClickThor = this.handleClickThor.bind(this);
   }
   
-  handleClick() {
+  handleClickSavio() {
     this.setState((estadoAnterior, _props) => ({
-      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
+      numeroDeCliquesSavio: estadoAnterior.numeroDeCliquesSavio + 1
+    }))
+  }
+
+  handleClickNoah() {
+    this.setState((estadoAnterior, _props) => ({
+      numeroDeCliquesNoah: estadoAnterior.numeroDeCliquesNoah + 1
+    }))
+  }
+
+  handleClickThor() {
+    this.setState((estadoAnterior, _props) => ({
+      numeroDeCliquesThor: estadoAnterior.numeroDeCliquesThor + 1
     }))
   }
 
   render() {
     return (
       <div className="App">
-        <button onClick={this.handleClick}>{this.state.numeroDeCliques}</button>
+        <button onClick={this.handleClickSavio}>{this.state.numeroDeCliquesSavio}</button>
+        <button onClick={this.handleClickNoah}>{this.state.numeroDeCliquesNoah}</button>
+        <button onClick={this.handleClickThor}>{this.state.numeroDeCliquesThor}</button>
       </div>
     );
   }
