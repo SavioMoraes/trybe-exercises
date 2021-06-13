@@ -4,35 +4,23 @@ import './App.css';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    console.log('componene sendo construído');
+    this.state = {
+      numeroDeCliques: 0
+    }
 
-    this.handleClickSavio = this.handleClickSavio.bind(this);
-    this.handleClickNoah = this.handleClickNoah.bind(this);
-    this.handleClickThor = this.handleClickThor.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
   
-  handleClickSavio() {
-    // console.log(this);
-    console.log('Clicou em Sávio')
-  }
-  
-  handleClickNoah() {
-    // console.log(this);
-    console.log('Clicou na Noah!')
-  }
-  
-  handleClickThor() {
-    // console.log(this);
-    console.log('Clicou no Thorzinho!')
+  handleClick() {
+    this.setState((estadoAnterior, _props) => ({
+      numeroDeCliques: estadoAnterior.numeroDeCliques + 1
+    }))
   }
 
   render() {
-    // console.log(this);
     return (
-      <div>
-        <button onClick={this.handleClickSavio}>Sávio</button>
-        <button onClick={this.handleClickNoah}>Noah</button>
-        <button onClick={this.handleClickThor}>Thor</button>
+      <div className="App">
+        <button onClick={this.handleClick}>{this.state.numeroDeCliques}</button>
       </div>
     );
   }
