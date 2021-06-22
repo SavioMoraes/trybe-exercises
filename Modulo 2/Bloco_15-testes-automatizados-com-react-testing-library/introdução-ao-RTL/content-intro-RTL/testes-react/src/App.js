@@ -1,3 +1,4 @@
+  // App.js
   import React, { Component } from 'react';
   import ValidEmail from './components/ValidEmail';
   import './App.css';
