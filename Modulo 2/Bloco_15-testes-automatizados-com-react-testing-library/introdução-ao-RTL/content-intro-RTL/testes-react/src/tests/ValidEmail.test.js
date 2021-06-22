@@ -4,15 +4,15 @@ import ValidEmail from '../components/ValidEmail';
 
 test('Testando um componente, caso o email seja valido.', () => {
   const EMAIL_USER = 'email@email.com';
-  const { getByText } = render(<ValidEmail email={EMAIL_USER} />);
-  const isValid = getByText('Email Valido');
+  const { queryByText } = render(<ValidEmail email={EMAIL_USER} />);
+  const isValid = queryByText('Email Válido');
   expect(isValid).toBeInTheDocument();
 });
 
 test('Testando um componente, caso o email seja inválido.', () => {
   const EMAIL_USER = 'emailerrado';
-  const { getByText } = render(<ValidEmail email={EMAIL_USER} />);
-  const isValid = getByText('Email Inválido');
+  const { queryByText } = render(<ValidEmail email={EMAIL_USER} />);
+  const isValid = queryByText('Email Inválido');
   expect(isValid).toBeInTheDocument();
 });
 
@@ -20,5 +20,5 @@ test('Testando um componente, caso nenhum email ainda tenha sido enviado.', () =
   const EMAIL_USER = '';
   const { queryByText } = render(<ValidEmail email={EMAIL_USER} />);
   const noMessage = queryByText('Email Inválido');
-  expect(noMessage).toBeInTheDocument();
+  expect(noMessage).not.toBeInTheDocument();
 })
