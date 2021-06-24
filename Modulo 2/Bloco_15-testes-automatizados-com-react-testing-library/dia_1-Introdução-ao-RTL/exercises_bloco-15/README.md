@@ -1,1 +1,1 @@
-Exercícios do bloco 15.1 :pencil::computer:
+Exercises day_15.1 - Inreodução à RTL :bowtie:
