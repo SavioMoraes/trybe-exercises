@@ -1,4 +1,5 @@
 import React from 'react';
+import ValidEmail from './components/ValidEmail';
 import './App.css';
 
 class App extends React.Component {
@@ -50,7 +51,7 @@ class App extends React.Component {
           id="btn-id"
           value="Voltar"
         />
-        <h2 data-testid="id-email-user">{`Valor: ${saveEmail}`}</h2>
+        <ValidEmail email={saveEmail}/>
       </div>
     )
   }
