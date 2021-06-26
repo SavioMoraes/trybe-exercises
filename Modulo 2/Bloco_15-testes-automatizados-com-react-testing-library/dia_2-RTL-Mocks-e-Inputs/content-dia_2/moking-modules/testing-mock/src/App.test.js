@@ -1,8 +1,8 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+const meuObjetoQualquer = { json: () => console.log('Oi!') }
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+meuObjetoQualquer.json();
+
+const soma = 2 + 2;
+const meuObjetoQualquer2AMissao = { minhaChaveFavorita: () => console.log((`Soma: ${soma}`)) }
+
+meuObjetoQualquer2AMissao.minhaChaveFavorita();
