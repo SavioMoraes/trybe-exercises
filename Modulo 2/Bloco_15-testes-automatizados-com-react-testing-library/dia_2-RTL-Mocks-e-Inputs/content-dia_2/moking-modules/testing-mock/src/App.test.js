@@ -1,15 +1,38 @@
-const meuObjetoQualquer = { json: () => console.log('Oi!') }
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
 
-meuObjetoQualquer.json();
+// A const 'joke' inserida no teste é o objeto json retornado pela chamada a // API de piadas, e, como sabemos isso, para simular um teste assíncrono, ///// passamos essa constante dentro do teste, que está recebendo no segundo // // parâmetro uma função anônima assíncrona com o async.
 
-const soma = 2 + 2;
-const meuObjetoQualquer2AMissao = { minhaChaveFavorita: () => console.log((`Soma: ${soma}`)) }
+afterEach(() => jest.clearAllMocks());
+it('verifica que, quando recebe uma piada, mostra ela na tela', async () => {
+  const joke = {
+    id: '7h3oGtr0fxc',
+    joke: 'Whiteboards... are remarkable.',
+    status: 200,
+  };
 
-meuObjetoQualquer2AMissao.minhaChaveFavorita();
+  // Estrutura Normal:
+  /*
+  const response = { json: jest.fn().mockResolvedValue(joke) }
+  global.fetch = jest.fn().mockResolvedValue(response);
+  */
 
-// Este código só funfa no console do inspect do navegador
-/*
-const response = { json: () => Promise.resolve({ joke: 'Whiteboards... are remarkble'})}
+  // Estrutura Concatenada:
+  jest.spyOn(global, 'fetch')
+  global.fetch = jest.fn().mockResolvedValue({
+    json: jest.fn().mockResolvedValue(joke),
+  });
 
-response.json();
-*/
+  const { findByText } = render(<App />);
+  await findByText('Whiteboards... are remarkable.');
+  expect(global.fetch).toBeCalledTimes(1);
+  expect(global.fetch).toBeCalledWith(
+    'https://icanhazdadjoke.com/',
+    { 'headers': { 'Accept': 'application/json' } }
+  );
+});
+
+// O findBy é assincrono, utilizá-lo seria a mesma coisa de utilizar o getBy,
+// porém com o auxílio do waitFor. Desestruturando o waitFor depois da //////// desestruturação do render englobando a chamada a getBy no waitFor:
+// `await waitFor(getByText('Whiteboards... are remarkable.'))
