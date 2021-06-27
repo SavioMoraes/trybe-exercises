@@ -12,6 +12,7 @@ describe('teste da aplicação toda', () => {
 
   it('deve renderizar o componente Sobre', () => {
     const { getByText, history } = renderWithRouter(<App />);
+    console.log(history);
     fireEvent.click(getByText(/Sobre/i));
     const pathname = history.location.pathname;
     expect(pathname).toBe('/about');
