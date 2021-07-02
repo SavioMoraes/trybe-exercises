@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List Redux</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.1.0/redux.min.js"></script>
+</head>
+<body>
+  <main>
+    <section>
+      <label type="text" for="task-input">
+        Incluir Tarefa:
+        <input type="text" name="todo" id="task-input">
+      </label>
+      <button type="button" id="btnAddTask">Adicionar</button>
+    </section>
+    <section id="showTasks">
+
+    </section>
+  </main>
+  <script>    
+    // Configurações do Redux
+    const INITIAL_STATE = {
+      tasks: []
+    }
+
+    const todoReducer = (state = INITIAL_STATE, action) => {
+      switch(action.type) {
+        case 'ADD_TASK':
+          return { tasks: [...state.tasks, action.payload]};
+        default: return state;
+      }
+    }
+
+    const addTaskAction = (newTask) => ({
+      type: 'ADD_TASK',
+      payload: newTask
+    });
+
+    const store = Redux.createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+    
+    const renderTasks = (tasks) => {
+      const sectionShowTasks = document.getElementById('showTasks');
+      sectionShowTasks.innerHTML = ''; // limpa a tela antes de inserir uma li, isso evita que toda vez que seje innserida uma li, ela retorne o valor atual mais o novo valor
+
+      tasks.forEach((task) => {
+        const li = document.createElement('li');
+        li.innerHTML = task;
+        sectionShowTasks.appendChild(li);
+      });
+    }
+
+    store.subscribe(() => { // não necessário no react!!!
+      const tasksInStore = store.getState().tasks;
+      renderTasks(tasksInStore);
+    });
+
+    // Criar a loja
+    // Criar um Reducer
+    // Criar Actions
+    // Disparar Actions
+
+    // Eventos da Página
+    const btnAddTask = document.getElementById('btnAddTask');
+    btnAddTask.addEventListener('click', () => {
+      const taskText = document.getElementById('task-input').value;
+      store.dispatch(addTaskAction(taskText))
+    });
+  </script>
+</body>
+</html>
