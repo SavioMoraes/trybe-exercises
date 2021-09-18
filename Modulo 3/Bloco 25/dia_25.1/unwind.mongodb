@@ -1,0 +1,15 @@
+use('ex_aggregation');
+db.inventory.insertOne(
+  { 
+    _id: 7, 
+    item: "ABC1", 
+    sizes: ["S", "M", "L"] 
+  }
+);
+
+use('ex_aggregation');
+db.inventory.aggregate(
+  [
+    { $unwind : "$sizes" }
+  ]
+);
