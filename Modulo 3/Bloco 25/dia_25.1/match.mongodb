@@ -9,6 +9,9 @@ db.articles.insertMany([
 { _id: ObjectId("55f5a1d3d4bede9ac365b25b"), author: "ty", score: 95, views: 1000 }
 ]);
 
+use('ex_aggregation');
+db.articles.find();
+
 /* Exemplo 1: Igualdade simples
 Vamos fazer uma operação utilizando o operador $match com igualdade simples: */
 

@@ -9,6 +9,9 @@ db.books.insertOne(
   }
 );
 
+use('ex_aggregation');
+db.books.find();
+
 // Exemplo 1: Incluindo campos específicos
 use('ex_aggregation');
 db.books.aggregate(
