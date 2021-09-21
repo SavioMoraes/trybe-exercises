@@ -1,5 +1,5 @@
 use('agg_example');
-db.sales.find().limit(2);
+db.sales.find();
 
 use('agg_example');
 db.sales.updateOne(
@@ -29,4 +29,59 @@ db.sales.aggregate([
   }
 ]);
 
+/* É possível subtrair duas datas também. A operação a seguir utiliza a expressão $subtract para subtrair o valor do campo date da data corrente, utilizando a variável de sistema NOW (disponível a partir da versão 4.2 do MongoDB ) e retorna a diferença em milissegundos: */
+use('agg_example');
+db.sales.aggregate([
+  {
+    $project: {
+      item: 1,
+      dateDifference: {
+        $subtract: ["$$NOW", "$date"]
+      }
+    }
+  }
+]);
+
+/* Alternativamente, você pode utilizar a função Date() para obter a data corrente: */
+use('agg_example');
+db.sales.aggregate([
+  {
+    $project: {
+      item: 1,
+      dateDifference: {
+        $subtract: [new Date(), "$date"]
+      }
+    }
+  }
+]);
+
+/* Você também pode utilizar milissegundos como argumento da subtração. A operação seguinte subtrai 5 minutos do campo date: */
+use('agg_example');
+db.sales.aggregate([
+  {
+    $project: {
+      item: 1,
+      dateDifference: {
+        $subtract: ["$date", 5 * 60 * 1000]
+      }
+    }
+  }
+]);
+
+// Para fixar:
+use('storage');
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      total_profit: {
+        $subtract: [
+          "$sale_price",
+          { $add: ["$taxes", "$purchase_price"] }
+        ]
+      }
+    }
+  }
+]);
 

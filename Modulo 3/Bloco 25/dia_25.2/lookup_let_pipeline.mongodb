@@ -17,6 +17,11 @@ db.warehouses.insertMany([
 /* A operação a seguir junta todos os documentos da coleção orders com a coleção warehouse através do campo item se a quantidade em estoque ( instock ) for suficiente para cobrir a quantidade vendida ( ordered ). Os documentos que dão match são colocados no campo stockdata. */
 
 use('example_db');
+db.orders.find();
+use('example_db');
+db.warehouses.find();
+
+use('example_db');
 db.orders.aggregate([
   {
     $lookup: {
@@ -39,6 +44,8 @@ db.orders.aggregate([
     }
   }
 ]);
+
+// Para fixar:
 
 use('agg_example');
 db.clients.insertMany([
@@ -65,6 +72,11 @@ db.transactions.insertMany([
   { value: 59020, from: "Homer Simpson", to: "Lisa Simpson", bank: 'International' },
   { value: 100, from: "Mark Zuck", to: "Barney Gumble", bank: 'FloridaBank' },
 ]);
+
+use('agg_example');
+db.clients.find();
+use('agg_example');
+db.transactions.find();
 
 // 1) Selecione todos os clientes com as suas respectivas transações feitas;
 use('agg_example');
