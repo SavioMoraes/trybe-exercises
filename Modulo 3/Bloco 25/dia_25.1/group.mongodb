@@ -58,6 +58,10 @@ db.sales.insertMany([
 }
 ]);
 
+use('ex_aggregation');
+// db.sales.find();
+db.sales.count();
+
 // Exemplo 1: Contando o número de documentos
 use('ex_aggregation');
 db.sales.aggregate([

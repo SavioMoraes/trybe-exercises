@@ -1,0 +1,32 @@
+use('agg_example');
+db.sales.find().limit(2);
+
+use('agg_example');
+db.sales.updateOne(
+  { _id: 1 }, 
+  { $set: { discount: 5 } }
+);
+
+use('agg_example');
+db.sales.updateOne(
+  { _id: 2 }, 
+  { $set: { discount: 2 } }
+);
+
+/* Em uma única operação no estágio $project , podemos montar uma expressão um pouco mais complexa, utilizando $add para calcular o total e o $subtract para aplicar um desconto no subtotal: */
+use('agg_example');
+db.sales.aggregate([
+  {
+    $project: {
+      item: 1,
+      total: {
+        $subtract: [
+          { $add: ["$price", "$fee"] },
+          "$discount"
+        ]
+      }
+    }
+  }
+]);
+
+
