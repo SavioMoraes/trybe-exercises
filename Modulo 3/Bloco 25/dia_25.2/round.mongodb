@@ -1,0 +1,49 @@
+use('agg_example');
+db.samples.find();
+
+/* A expressão $round retorna o número inteiro mais próximo do valor atual e também permite definir a quantidade de casas decimais que você quer manter ao arredondar. */
+
+use('agg_example');
+db.samples.aggregate([
+  { $project: { value: 1, roundedValue: { $round: ["$value"] } } }
+]);
+
+/* No $round nós passamos uma array como argumento, em vez de um valor plano , isso acontece, para caso, passemos um segundo parâmetro ele vai arredondar mantendo a quantidade de casas decimais que for definida. Vamos ver um exemplo. */
+
+use('agg_example');
+db.samples.aggregate([
+  { $project: { value: 1, roundedValue: { $round: ["$value", 1] } } }
+]);
+
+// Para fixar (Utilizando o banco de dados storage):
+
+/* 1) Retorne o menor número inteiro relativo ao preço de venda de cada produto. */
+use('storage');
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      floored_price: { $floor: "$sale_price" }
+    }
+  }
+]);
+
+/* 2) Retorne o maior número inteiro relativo ao lucro total sobre cada produto. */
+use('storage');
+db.products.find();
+
+use('storage');
+db.products.aggregate([
+  {
+    $project: {
+        _id: 0,
+        name: 1,
+        ceiling_price: {
+            $ceil: {
+                $subtract: ["$sale_price", "$purchase_price"]
+            }
+        }
+    }
+  }
+]);
