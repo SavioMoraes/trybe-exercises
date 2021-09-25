@@ -1,0 +1,47 @@
+use('agg_example');
+db.ratings.insertMany([
+  { _id: 1, start: 5, end: 8 },
+  { _id: 2, start: 4, end: 4 },
+  { _id: 3, start: 9, end: 7 },
+  { _id: 4, start: 6, end: 7 }
+]);
+
+use('agg_example');
+db.ratings.find();
+
+
+// A expressão $abs retorna o valor absoluto de um número.
+
+/* Aplicando a expressão $abs combinada com a expressão $subtract no estágio $project , podemos retornar a diferença entre os valores dos campos start e end: */
+use('agg_example');
+db.ratings.aggregate([
+  {
+    $project: {
+      delta: {
+        $abs: { $subtract: ["$start", "$end"] }
+      }
+    }
+  }
+]);
+
+// Para Fixar
+//Utilizando o banco de dados storage , faça o seguinte exercício:
+/* 1) Calcule o valor absoluto do lucro total de cada produto.*/
+
+use('storage');
+db.products.aggregate([
+  {
+    $project: {
+      _id: 0,
+      name: 1,
+      delta: {
+        $abs: {
+          $subtract: [
+            "$sale_price",
+            { $add: ["$taxes", "$purchase_price"] }
+          ]
+        }
+      }
+    }
+  }
+]);
