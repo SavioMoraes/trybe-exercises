@@ -1,0 +1,20 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "exercicios intro NodeJS",
+  "main": "index.js",
+  "scripts": {
+    "fibonacci": "node fibonacci",
+    "fatorial": "node fatorial.js",
+    "start": "node index.js",
+    "sorteio": "node sorteio.js",
+    "velocidade": "node velocidade.js",
+    "imc": "node imc.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Savio Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
