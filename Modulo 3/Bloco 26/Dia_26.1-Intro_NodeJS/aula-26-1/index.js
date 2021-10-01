@@ -1,4 +1,6 @@
+// console.log('Olá Turma 11');
 // const nome = "Turma 11";
+// console.log(nome);
 // function teste() {
 //   console.log('Olá Turma 11!');
 // }

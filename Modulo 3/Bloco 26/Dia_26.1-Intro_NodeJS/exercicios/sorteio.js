@@ -17,7 +17,7 @@ function logResultado(numero, resposta) {
 }
 
 function runGame() {
-  const numero = parseInt(Math.random() * 10); // A função Math.random() retorna um número pseudo-aleatório no intervalo [0, 1[, ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo). Multiplicando por 10, retorna numeros de 0 a 9!!!
+  const numero = parseInt(Math.random() * 10); // A função Math.random() retorna um número pseudo-aleatório no intervalo [0...1], ou seja, de 0 (inclusivo) até, mas não incluindo, 1 (exclusivo). Multiplicando por 10, retorna numeros de 0 a 9!!!
 
   const resposta = readline.questionInt(
     'Digite um número entre 0 e 10 para saber se é o número que estou pensando: '

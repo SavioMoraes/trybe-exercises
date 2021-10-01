@@ -6,16 +6,16 @@
 
 /* Exercício 02:linha 7 package.json */
 
-/* Exercício 3 */
+// /* Exercício 3 */
 const readline = require('readline-sync');
 // const peso = readline.questionInt('Qual o seu peso? (em kg) ');
 // const altura = readline.questionInt('Qual a sua altura? (em cm) ');
 
-/* Exercício 4 */
+// /* Exercício 4 */
 // const peso = readline.questionFloat('Qual o seu peso? (em kg) ');
 
-/* A função Math.pow() O método pow () retorna o valor de x elevado à potência de y (x elevado a y). */
-/* Exercício 5 */
+// /* A função Math.pow() O método pow () retorna o valor de x elevado à potência de y (x elevado a y). */
+// /* Exercício 5 */
 function calculaImc () {
   const peso = readline.questionFloat('Qual o seu peso? (em kg) ');
   const altura = readline.questionInt('Qual a sua altura? (em cm) ');

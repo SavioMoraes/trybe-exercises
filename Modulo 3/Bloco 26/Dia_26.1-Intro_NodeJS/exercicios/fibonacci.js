@@ -1,6 +1,6 @@
 const readline = require('readline-sync');
 
-function calculaElemento (n) {
+function calculaElemento(n) {
   // a armazena o último número que calculamos
   let a = 1;
   // b armazena o penúltimo número que calculamos
