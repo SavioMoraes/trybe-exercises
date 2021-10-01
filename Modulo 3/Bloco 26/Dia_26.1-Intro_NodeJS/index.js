@@ -24,4 +24,4 @@
 // console.log(`10 dólares em reais: ${usdToBrl(10)}`); // 10 dólares em reais: 53.7
 
 // const fs = require('fs');
-// fs.readFileSync('./meuArquivo.txt'); // não funfow: ainda não tinha iniciado um pacote node dentro da pasta dia_26. Veja exemplode uso no index.js do diretório aula-26-1, no arquivo index.js linhas 35 e 36;
+// fs.readFileSync('./meuArquivo.txt'); // não funfow: ainda não tinha iniciado um pacote node dentro da pasta dia_26. Veja exemplo de uso no index.js do diretório aula-26-1, no arquivo index.js linhas 35 e 36;
