@@ -4,6 +4,7 @@
 //   // para "tentar cumprir" a promessa
 // });
 
+//------------------------------------------------------------------------
 /* Exemplo Promise */
 // const fs = require('fs');
 
@@ -18,13 +19,15 @@
 //   });
 // }
 
-// readFilePromise('./file.txt') // A função me promete que vai ler o arquivo
+// readFilePromise('./promise.txt') // A função me promete que vai ler o arquivo
 //   .then((content) => { // Caso ela cumpra o que prometeu
 //     console.log(`Lido arquivo com ${content.byteLength} bytes`); // Escrevo o resultado no console
 //   })
 //   .catch((err) => { // Caso ela não cumpra o que prometeu
 //     console.error(`Erro ao ler arquivo: ${err.message}`); // Escrevo o erro no console
 //   });
+
+// --------------------------------------------------------------------------
 
 /* Exemplo de Promise com .then() evitando callbacks hells */
 const fs = require('fs');

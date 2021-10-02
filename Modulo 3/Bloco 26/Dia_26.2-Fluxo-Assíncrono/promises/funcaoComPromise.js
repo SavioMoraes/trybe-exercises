@@ -11,7 +11,13 @@ function calcularDivisao(num1, num2) {
   return promise;
 }
 
+// caso de sucesso:
 calcularDivisao(2, 1)
+  .then((result) => console.log(result))
+  .catch(err => console.log("err: %s", err.message))
+
+// caso de falha:
+calcularDivisao(2, 0)
   .then((result) => console.log(result))
   .catch(err => console.log("err: %s", err.message))
 
