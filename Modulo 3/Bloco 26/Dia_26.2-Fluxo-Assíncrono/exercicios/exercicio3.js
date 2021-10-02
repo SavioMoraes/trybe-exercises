@@ -15,7 +15,7 @@ function doMath(a, b, c) {
 }
 
 function getRandomNumber() {
-  return Math.floor(Math.random() * 100 + 1);
+  return Math.floor(Math.random() * 10 + 1);
 }
 
 async function callDoMath() {
@@ -35,6 +35,8 @@ async function callDoMath() {
   } catch (err) {
     console.error(err);
   }
+
+  console.log(...randomNumbers);
 }
 
 callDoMath(); // precisa ser chamada para funcionar!!!!!!
