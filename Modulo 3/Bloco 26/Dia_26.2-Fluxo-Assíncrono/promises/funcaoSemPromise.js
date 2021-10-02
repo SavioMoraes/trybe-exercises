@@ -7,11 +7,13 @@ function calcularDivisao(num1, num2) {
 }
 
 try {
-  const resultado = calcularDivisao(2, 1);
+  const resultado = calcularDivisao(25, 5);
   console.log("resultado: %s", resultado);
 } catch(excecao) {
   console.log("erro: %s", excecao.message);
 }
+
+module.exports = { calcularDivisao };
 
 // Error: O construtor de Error cria um objeto de erro. Instâncias de objetos Error são lançadas quando erros de tempo de execução ocorrem. O objeto Error também pode ser usado como objeto base para exceções definidas pelo usuário.
 

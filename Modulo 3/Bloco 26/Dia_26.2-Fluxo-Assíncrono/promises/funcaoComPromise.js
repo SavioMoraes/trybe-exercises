@@ -14,3 +14,5 @@ function calcularDivisao(num1, num2) {
 calcularDivisao(2, 1)
   .then((result) => console.log(result))
   .catch(err => console.log("err: %s", err.message))
+
+  module.exports = { calcularDivisao };
