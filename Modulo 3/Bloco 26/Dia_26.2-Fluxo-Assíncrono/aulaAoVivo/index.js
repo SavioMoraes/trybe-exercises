@@ -20,7 +20,7 @@
 // const fs = require('fs');
 // const util = require('util');
 
-// const readFilePromise = util.promisify(fs.readFile);
+// const readFilePromise = util.promisify(fs.readFile); // 'util.promisify' transforma uma calback em uma Promise.
 
 // readFilePromise('./teste.txt').then((response) => {
 //   console.log(response.toString());
@@ -40,4 +40,20 @@
 //   console.log(error.message);
 // }
 
-/* Padrão: function sincrona try/catch, function assincrona then/catch */
+// Como pegar o erro em função Assíncrona com o 'then' / 'catch'
+async function soma() {
+  return 3 + 5
+  throw new Error('Erro encontrado');
+}
+
+soma().then((res) => {
+  console.log(res)
+}).catch(e => {
+  console.log(e.message)
+})
+
+/* 
+* Padrão: promissificar as funções - 
+* function sincrona try/catch, 
+* function assincrona then/catch 
+*/
