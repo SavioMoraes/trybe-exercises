@@ -1,9 +1,18 @@
 const { expect } = require('chai')
 const { readFile } = require('../readFile')
+const sinon = require('sinon')
+const fs = require('fs').promises
 
 describe('Chama a função "readFile"', () => {
   describe('quando o arquivo é lido com sucesso', () => {
     const FILE_CONTENT = 'Turma 11 é 10'
+
+    before(() => {
+      sinon.stub(fs, 'readFile').resolves(FILE_CONTENT)
+    })
+    after(() => {
+      fs.readFile.restore()
+    })
 
     describe('a resposta', () => {
       it('é uma string', async () => {
@@ -16,6 +25,7 @@ describe('Chama a função "readFile"', () => {
       })
     })
   })
+
   describe('quando ocorrer um erro na leitura do arquivo', () => {
     describe('a resposta', () => {
       it('é igual a "null"', async () => {
