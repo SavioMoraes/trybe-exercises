@@ -1,0 +1,24 @@
+{
+  "name": "io-files",
+  "version": "1.0.0",
+  "description": "testes em node com mocha e chai, usando TDD",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha tests"
+  },
+  "keywords": [
+    "testes",
+    "mocha",
+    "chai",
+    "tdd",
+    "nodejs"
+  ],
+  "author": "Savio Moraes",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "sinon": "^11.1.2"
+  }
+}
