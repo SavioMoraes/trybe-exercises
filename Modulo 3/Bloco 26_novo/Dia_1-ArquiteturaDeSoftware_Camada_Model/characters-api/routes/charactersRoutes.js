@@ -1,5 +1,6 @@
 const router = require('express').Router();
-const { getAllCharacters, insertCharacter } = require('../models/charactersModels');
+// const { getAllCharacters, insertCharacter } = require('../models/charactersModels'); // MYSQL
+const { getAllCharacters, insertCharacter } = require('../models/charactersModelsMongo'); // MongoDB
 
 router.get('/', async (req, res) => {
   const data = await getAllCharacters();
