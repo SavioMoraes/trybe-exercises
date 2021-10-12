@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 
-const Author = require('./models/Author');
+const Author = require('./services/Author');
 const Book = require('./models/Book');
 
 // rota authors
@@ -30,11 +30,11 @@ app.get('/authors/:id', async (req, res) => {
 app.post('/authors', async (req, res) => {
   const { first_name, middle_name, last_name } = req.body;
 
-  if (!Author.isValid(first_name, middle_name, last_name)) return res.status(400).json({ message: 'Dados inválidos'});
+  const author = await Author.create(first_name, middle_name, last_name);
+  
+  if (!author) return res.status(400).json({ message: 'Dados inválidos'});
 
-  await Author.create(first_name, middle_name, last_name);
-
-  res.status(201).json({ message: "Autor criado com sucesso!"})
+  res.status(201).json(author)
 });
 
 // rota books
