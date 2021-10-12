@@ -50,10 +50,11 @@ app.get('/books', async (req, res) => {
   res.status(200).json(books);
 });
 
-app.get('/books/:id', async (req, res) => {
-  const { id } = req.params;
+app.get('/books/:_id', async (req, res) => {
+  const { _id } = req.params;
 
-  const book = await Book.getById(id);
+  // const book = await Book.getById(id); // MYSQL: funfandooo!!!
+  const book = await Book.findById(_id); // MongoDB: funfandooooo!!!!! Tem que passar _id ao invés de id! na rota e nos parâmetros! Além de ter que chamar o ObjectId do mongo em Book.js para poder pegar o _id do objeto do mongo!
 
   if (!book) return res.status(404).json({ message: 'Book not found' })
 

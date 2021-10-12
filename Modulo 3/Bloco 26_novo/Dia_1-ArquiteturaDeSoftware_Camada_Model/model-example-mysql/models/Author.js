@@ -6,7 +6,17 @@
   *Existirão funções para ler e criar escritores do banco de dados;
   *A rota só irá interagir com os dados através da interface do model Author 
 */
+
+/* Conectando com o MyQL (object) */ /* Conectando com o MongoDB (arrow function) */
 const connection = require('./connection');
+
+
+// const getAll = async () => {
+//   // const result = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors'); // essa linha traz o array correto com os dados do bd e também um outro array com métodos/dados de execução da própria querie, para trazer só o primeiro array com os dados corretos, desestruturamos em uma variável o nome do array/lista que queremos e retornamos ela, feito isso, conseguimos pegar apenas o primeiro elemento do array (que também é um array) e jogamos na variável authors e retornamos ela, como na linha abaixo:
+//   const [authors] = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors');
+  
+//   return authors.map(serialize).map(getNewAuthor);
+// };
 
 // Método para juntar nome e sobrenomes numa variável 'fullName':
 
@@ -36,30 +46,24 @@ const serialize = (authorData) => ({
   lastName: authorData.last_name,
 });
 
-const getAll = async () => {
-  // const result = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors'); // essa linha traz o array correto com os dados do bd e também um outro array com métodos/dados de execução da própria querie, para trazer só o primeiro array com os dados corretos, desestruturamos em uma variável o nome do array/lista que queremos e retornamos ela, feito isso, conseguimos pegar apenas o primeiro elemento do array (que também é um array) e jogamos na variável authors e retornamos ela, como na linha abaixo:
-  const [authors] = await connection.execute('SELECT id, first_name, middle_name, last_name FROM authors');
+// MYSQL
+// const findById = async (id) => {
+//   const [authorData] = await connection.execute(
+//     'SELECT id, first_name, middle_name, last_name FROM authors WHERE id=?',
+//     [id]
+//   );
 
-  return authors.map(serialize).map(getNewAuthor);
-};
+//   if (authorData.length === 0) return null;
 
-const findById = async (id) => {
-  const [authorData] = await connection.execute(
-    'SELECT id, first_name, middle_name, last_name FROM authors WHERE id=?',
-    [id]
-  );
+//   const { firstName, middleName, lastName } = authorData.map(serialize)[0];
 
-  if (authorData.length === 0) return null;
-
-  const { firstName, middleName, lastName } = authorData.map(serialize)[0];
-
-  return getNewAuthor({
-    id,
-    firstName,
-    middleName,
-    lastName
-  });
-};
+//   return getNewAuthor({
+//     id,
+//     firstName,
+//     middleName,
+//     lastName
+//   });
+// };
 
 const isValid = (firstName, middleName, lastName) => {
   if (!firstName || typeof firstName !== 'string') return false;
@@ -69,7 +73,9 @@ const isValid = (firstName, middleName, lastName) => {
   return true;
 };
 
-// codigo padrão
+
+/* MYSQL */
+// create codigo padrão //
 // const create = async (firstName, middleName, lastName) => {
 //   connection.execute(
 //     'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?, ?, ?)',
@@ -77,12 +83,79 @@ const isValid = (firstName, middleName, lastName) => {
 //   );
 // };
 
+// create código com menos linhas
+// const create = async (firstName, middleName, lastName) => connection.execute(
+//     'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?, ?, ?)',
+//     [firstName, middleName, lastName]
+// );
 
-// código com menos linhas
-const create = async (firstName, middleName, lastName) => connection.execute(
-    'INSERT INTO model_example.authors (first_name, middle_name, last_name) VALUES (?, ?, ?)',
-    [firstName, middleName, lastName]
-);
+// -------------------------------------------------------------------------
+
+/* Conectando com o MongoDB */
+
+const { ObjectId } = require('mongodb');
+
+// exemplo video - course: funfandooo!!
+const getAll = async () => {
+  return connection()
+    .then((db) => db.collection('authors').find().toArray())
+      .then((authors) => {
+        return authors.map(({ _id, firstName, middleName, lastName }) => {
+          return getNewAuthor({
+            id: _id,
+            firstName,
+            middleName,
+            lastName
+          })
+        });
+      });
+};
+// Obs: no exemplo do course não temo return nas linhas 102 e 103, testando aqui, sem o return na linha 102 não retorna nada e sem o return da 103 retorna tudo null.
+
+// exemplo vídeo - course: funandooo!!!
+// const findById = async (id) => {
+//   const authorData = await connection()
+//     .then((db) => db.collection('authors').findOne(ObjectId(id)));
+
+//   if (!authorData) return null;
+
+//   const { firstName, middleName, lastName } = authorData;
+
+//   return getNewAuthor({
+//     id,
+//     firstName,
+//     middleName,
+//     lastName,
+//   });
+// };
+
+// exemplo course: funfandooo!!!
+const findById = async (id) => {
+  if (!ObjectId.isValid(id)) {
+      return null;
+  }
+
+  const authorData = await connection()
+      .then((db) => db.collection('authors').findOne(new ObjectId(id)));
+
+  if (!authorData) return null;
+
+  const { firstName, middleName, lastName } = authorData;
+
+  return getNewAuthor({ id, firstName, middleName, lastName });
+};
+
+// exemplo vídeo - course: funfandooo!!!
+// const create = async (firstName, middleName, lastName) => {
+//   await connection()
+//     .then((db) => db.collection('authors').insertOne({ firstName, middleName, lastName }));
+// }
+
+// exemplo course: funfandoooo!!!
+const create = async (firstName, middleName, lastName) =>
+    connection()
+        .then((db) => db.collection('authors').insertOne({ firstName, middleName, lastName }))
+        .then(result => getNewAuthor({ id: result.insertedId, firstName, middleName, lastName }));
 
 module.exports = {
   getAll,
