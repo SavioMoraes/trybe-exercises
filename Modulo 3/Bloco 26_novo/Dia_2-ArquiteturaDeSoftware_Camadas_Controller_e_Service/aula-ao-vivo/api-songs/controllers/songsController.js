@@ -1,4 +1,4 @@
-const Song = require('../services/songService')
+const Song = require('../services/songService');
 
 const getAllSongs = async (req, res) => {
   try {
@@ -14,8 +14,8 @@ const createSong = async (req, res) => {
   try {
     const { name, album } = req.body
     const data = await Song.createNewSong({ name, album })
-    if(data.erro_code && data.erro_code === 'MUSIC_EXISTS')
-      return res.status(400).json({ message: "Essa música já esta cadastrada" })
+    if (data.erro_code && data.erro_code === 'MUSIC_EXISTS')
+      return res.status(400).json({ message: "Essa música já está cadastrada"})
     res.status(200).json(data)
   } catch (error) {
     console.error(error)
