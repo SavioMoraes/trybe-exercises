@@ -1,0 +1,20 @@
+Nossa Model e nosso Service
+- Busca todos os filmes no BD
+-- quando não existe nenhum filme criado
+   - retorna um array
+   - o array está vazio
+-- quando existem filmes criados
+   - retorna um array
+   - o array não está vazio
+   - o array possui itens do tipo objeto
+   - tais itens possui as propriedades: "id", "title", "releaseYear" e "directedBy"
+
+
+Nosso Controller
+- Ao chamar o controller de getAll
+-- quando não existem filmes no banco de dados
+   - é chamado o método "status" passando o código 200
+   - é chamado o método "json" passando um array
+-- quando existem filmes no banco de dados
+   - é chamado o método "status" passando o código 200
+   - é chamado o método "json" passando um array
