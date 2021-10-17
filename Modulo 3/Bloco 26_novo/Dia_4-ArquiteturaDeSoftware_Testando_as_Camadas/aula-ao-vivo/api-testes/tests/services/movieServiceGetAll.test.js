@@ -2,7 +2,7 @@ const sinon = require('sinon');
 const { expect } = require('chai');
 
 const MoviesModel = require('../../models/movieModel');
-const MoviesService = require('../../services/MovieService');
+const MoviesService = require('../../services/movieService');
 
 
 describe('Busca todos os filmes no BD - Service', () => {
