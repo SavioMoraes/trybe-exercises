@@ -30,7 +30,9 @@ describe('Busca apenas um filme no BD através do ID', () => {
       .resolves(connectionMock);
   });
 
-  
+  // after(() => {
+  //   mongoConnection.getConnection.restore();
+  // });
 
   describe('quando não existe um filme para o ID informado', () => {
     it('retorna "null"', async () => {
@@ -52,7 +54,7 @@ describe('Busca apenas um filme no BD através do ID', () => {
     });
 
     after(() => {
-      mongoConnection.getConnection.restore();
+    mongoConnection.getConnection.restore();
     });
 
     it('retorna um objeto', async () => {

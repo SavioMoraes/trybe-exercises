@@ -19,3 +19,4 @@ const getConnection = () => {
 };
 
 module.exports = { getConnection };
+
