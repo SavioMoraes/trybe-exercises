@@ -1,0 +1,17 @@
+{
+  "name": "package-nodejs",
+  "version": "1.0.0",
+  "description": "Meu primeiro pacote Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "lint": "eslint"
+  },
+  "author": "Savio Moraes",
+  "license": "ISC",
+  "dependencies": {
+    "dog-names": "^2.0.0",
+    "eslint": "^7.32.0"
+  }
+}

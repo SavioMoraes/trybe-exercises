@@ -1,0 +1,16 @@
+{
+  "name": "aula-ao-vivo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha tests"
+  },
+  "author": "Savio Moraes",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.1.2",
+    "sinon": "^11.1.2"
+  }
+}
