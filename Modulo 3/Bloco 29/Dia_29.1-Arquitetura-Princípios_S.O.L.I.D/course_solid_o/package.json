@@ -1,0 +1,16 @@
+{
+  "name": "course_solid_o",
+  "version": "1.0.0",
+  "description": "S.O.L.I.D: 'O': Open/Closed Principle - Princípio aberto/fechado Princípio aberto/fechado :one::zero:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-trybe-backend": "^1.0.4"
+  }
+}
