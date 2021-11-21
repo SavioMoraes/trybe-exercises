@@ -4,7 +4,8 @@
   "description": "S.O.L.I.D: 'O': Open/Closed Principle - Princípio aberto/fechado Princípio aberto/fechado :one::zero:",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./tests/**/*$NAME*.{test,spec}.js --exit",
+    "lint": "eslint --no-inline-config --ext .js --no-error-on-unmatched-pattern -c .eslintrc.json ."
   },
   "keywords": [],
   "author": "",
