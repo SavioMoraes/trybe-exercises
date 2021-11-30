@@ -1,5 +1,3 @@
-// const sequelize = require("sequelize");
-
 const Store = (sequelize, DataTypes) => {
   const Store = sequelize.define('Store', {
     name: DataTypes.STRING,
