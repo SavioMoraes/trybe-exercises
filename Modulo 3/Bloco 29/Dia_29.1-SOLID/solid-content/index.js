@@ -1,10 +1,8 @@
 const { default: axios } = require('axios');
 
-async function validaeconsultaCEP() {
+async function consultaCEP() {
   const cep = '46.860-000';
-
-  const regexCEP = /^[0-9]{2}.[0-9]{3}-[0-9]{3}$/;
-  const valida = regexCEP.test(cep);
+  const valida = validaCEP(cep);
 
   let cepTratado;
   if (valida) {
@@ -16,4 +14,9 @@ async function validaeconsultaCEP() {
   }
 }
 
-validaeconsultaCEP();
+function validaCEP(cep) {
+  const regexCEP = /^[0-9]{2}.[0-9]{3}-[0-9]{3}$/;
+  return regexCEP.test(cep);
+}
+
+consultaCEP();
