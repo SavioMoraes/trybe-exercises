@@ -1,7 +1,20 @@
 const { default: axios } = require('axios');
 
-async function consultaCEP() {
-  const cep = '46.860-000';
+const CIDADES = {
+  iaçu: {
+    cep: '46.860-000',
+  },
+  itaberaba: {
+    cep: '46.880-000',
+  },
+  salvador: {
+    cep: '41.500-620',
+  },
+};
+
+async function consultaCEP(cidade) {
+  const { cep } = CIDADES[`${cidade}`];
+
   const valida = validaCEP(cep);
 
   let cepTratado;
@@ -19,4 +32,4 @@ function validaCEP(cep) {
   return regexCEP.test(cep);
 }
 
-consultaCEP();
+consultaCEP('salvador');
