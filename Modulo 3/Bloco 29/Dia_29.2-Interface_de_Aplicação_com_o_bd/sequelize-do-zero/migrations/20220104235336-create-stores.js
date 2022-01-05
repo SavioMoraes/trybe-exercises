@@ -5,7 +5,7 @@ module.exports = {
     const StoresTable = queryInterface.createTable('Stores', {
       id: {
         allowNull: false,
-        autoIncrment: true,
+        autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER,
       },
