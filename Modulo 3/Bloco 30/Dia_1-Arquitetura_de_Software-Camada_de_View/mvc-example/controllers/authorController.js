@@ -1,7 +1,9 @@
 const Author = require('../models/Author');
 
 const listAuthors = async (req, res) => {
- // Já vamos voltar para adicionar a lógica aqui
+ const authors = await Author.getAll();
+
+  res.status(200).render('authors/index', { authors });
 };
 
 module.exports = {
