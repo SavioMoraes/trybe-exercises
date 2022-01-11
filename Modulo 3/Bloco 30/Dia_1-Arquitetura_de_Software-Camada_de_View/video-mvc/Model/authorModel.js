@@ -1,7 +1,7 @@
 const connection = require('./connection');
 
 const findAllAuthors = async () => {
-  const authors = connection.execute('SELECT * FROM authors');
+  const [authors] = await connection.execute('SELECT * FROM authors');
 
   return authors;
 };
