@@ -30,7 +30,7 @@ const findAllAuthors = async () => {
   return authors.map(serialize).map(getNewAuthor);
 };
 
-const isValid = (firstName, middleName, lastName) => {
+const isValid = async (firstName, middleName, lastName) => {
   if (!firstName || typeof firstName !== 'string') return false;
   if (middleName && typeof middleName !== 'string') return false;
   if (!lastName || typeof lastName !== 'string') return false;
@@ -44,6 +44,6 @@ const create = async (firstName, middleName, lastName) => {
 
 module.exports = {
   findAllAuthors,
-  isValid,
   create,
+  isValid,
 };
