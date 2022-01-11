@@ -1,8 +1,11 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 
 const authorController = require('./Controller/authorController');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+
 const port = 3000;
 
 app.set('view engine', 'ejs');
