@@ -7,5 +7,5 @@ const findAllAuthors = async () => {
 };
 
 module.exports = {
-  findAllAuthors
+  findAllAuthors,
 };

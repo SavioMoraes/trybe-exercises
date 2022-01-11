@@ -6,7 +6,7 @@ const app = express();
 const port = 3000;
 
 app.set('view engine', 'ejs');
-app.set('views', './view')
+app.set('views', './View')
 
 app.get('/authors', authorController.listAuthors);
 
