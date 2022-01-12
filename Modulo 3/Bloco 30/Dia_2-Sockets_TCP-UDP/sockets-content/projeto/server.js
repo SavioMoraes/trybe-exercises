@@ -12,9 +12,16 @@ const server = net.createServer((connection) => {
   /* Nessa conexão que foi aberta, podemos fazer várias coisas. Uma delas é escrever/devolver uma mensagem para o cliente. */
   // connection.write('Mensagem do servidor!\r\n');
   // connection.pipe(connection);
+  server.getConnections((err, count) => {
+    console.log(count);
+  });
 });
+
+// server.getConnections((err, count) => {
+//   console.log(count);
+// });
 
 /* Após termos programado o servidor, é só colocá-lo de pé */
 server.listen(8080, () => {
-  console.log('Servidor escutando na porta 8080');
+  console.log('O Servidor está ligado');
 });
