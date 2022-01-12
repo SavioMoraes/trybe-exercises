@@ -10,8 +10,8 @@ const server = net.createServer((connection) => {
     console.log('Cliente desconectado');
   });
   /* Nessa conexão que foi aberta, podemos fazer várias coisas. Uma delas é escrever/devolver uma mensagem para o cliente. */
-  connection.write('Mensagem do servidor!\r\n');
-  connection.pipe(connection);
+  // connection.write('Mensagem do servidor!\r\n');
+  // connection.pipe(connection);
 });
 
 /* Após termos programado o servidor, é só colocá-lo de pé */
