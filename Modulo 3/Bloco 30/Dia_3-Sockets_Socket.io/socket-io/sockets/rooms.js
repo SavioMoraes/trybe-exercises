@@ -5,7 +5,7 @@ module.exports = (io) => io.on('connection', (socket) => {
     socket.emit('serverMessage', `Bem vindo ${username} a sala sobre ${room}`);
 
     socket.broadcast.to(room).emit('serverMessage', `${username} acabou de entrar na sala`);
-    
+  
     socket.on('roomClientMessage', ({ message, room}) => {
       io
         .to(room)
