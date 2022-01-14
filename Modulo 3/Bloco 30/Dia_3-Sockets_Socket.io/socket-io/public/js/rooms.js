@@ -1,4 +1,4 @@
-const io = window.io();
+const socket = window.io();
 const qs = require('qs');
 
 const { username, room } = qs.parse(location.search, {
