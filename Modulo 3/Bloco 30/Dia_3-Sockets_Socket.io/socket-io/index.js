@@ -6,9 +6,11 @@ const io = require('socket.io')(http, {
   cors: {
     origin: 'http://localhost:3000', // url aceita pelo cors
     methods: ['GET', 'POST'], // Métodos aceitos pela url
-  }});
+}});
 
-  require('./sockets/ping')(io);
+app.use(express.static(__dirname + '/public'));
+
+require('./sockets/ping')(io);
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
