@@ -12,6 +12,8 @@ app.use(express.static(__dirname + '/public'));
 
 require('./sockets/ping')(io);
 require('./sockets/chat')(io);
+require('./sockets/rooms')(io);
+
 
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
