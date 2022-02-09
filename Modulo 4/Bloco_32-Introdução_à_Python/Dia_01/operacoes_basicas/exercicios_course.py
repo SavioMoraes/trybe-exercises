@@ -116,7 +116,7 @@ print(info)
 
 my_list = [20, 20, 1, 2]
 count_elements = {
-    20 : 2,
+    20: 2,
     1: 1,
     2: 2
 }
@@ -178,5 +178,6 @@ ratings = [6, 8, 5, 9, 10]
 
 for rating in ratings:
     # o sinal % representa a operação "resto".
-    if (rating % 3) == 0: # se o resto é zero, é divisível
+    if (rating % 3) == 0:
         print(f'{rating} é múltiplo de 3')
+# se o resto é zero, é divisível
