@@ -1,0 +1,1 @@
+input("Digite uma mensagem: ")
