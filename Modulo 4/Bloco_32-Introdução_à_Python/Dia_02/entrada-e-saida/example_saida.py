@@ -8,6 +8,6 @@ print("Maria", "João", "Miguel", "Ana", sep=", ")
 print("Em duas ")
 print("linhas.")
 
-print("Na mesma", end="")
-# print("Na mesma", end=" ")  # separa a palavra colada!
+print("Na mesma", end="")  # palavras coladas -> ""
+# print("Na mesma", end=" ")  # " " -> separa a palavra colada!
 print("linha.")
