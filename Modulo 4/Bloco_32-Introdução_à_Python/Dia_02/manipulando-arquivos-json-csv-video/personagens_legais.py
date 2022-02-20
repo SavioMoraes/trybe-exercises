@@ -2,7 +2,7 @@
 import csv
 
 # with: com este comando o código vai para dentro de um contexto e
-# fecha ao sair do with, não precisando fechar com o clse()!!!
+# fecha ao sair do with, não precisando fechar com o close()!!!
 
 # esse comando abaixo já dá para visualizar que o objeto json está
 # sendo lido com sucesso, abaixo exemplo da conversão!!!
@@ -10,7 +10,7 @@ import csv
 #     print(superheroes_file.read())
 
 
-# com este comendo visualizamos todo o json, se acrescentarmos o indice,
+# com este comando visualizamos todo o json, se acrescentarmos o indice,
 # visualizamos só o herói correspondente e com o indíce mais chave,
 # podemos acessar o nome do herói!
 # with open("super-heroes.json") as superheroes_file:
@@ -37,7 +37,7 @@ import csv
 #     print(superheroes_list)
 
 # ao ser mais específico com o 'for', o resultado esperado já aparece!!!
-# para imrimir todo o objeto, passamos superhero sem parâmetro
+# para imprimir todo o objeto, passamos superhero sem parâmetro
 # with open("dc-wikia-data.csv") as superheroes_file:
 #     superheroes_list = csv.DictReader(superheroes_file)
 #     for superhero in superheroes_list:
