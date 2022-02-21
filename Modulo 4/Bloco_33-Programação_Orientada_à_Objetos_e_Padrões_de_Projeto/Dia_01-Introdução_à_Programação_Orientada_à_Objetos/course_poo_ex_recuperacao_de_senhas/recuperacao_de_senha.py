@@ -4,6 +4,9 @@ import ssl
 
 class User:  # entidade geral - definimos uma Classe
     def __init__(self, name, email, password):
+        # o self é usado em classes no Python para indicar que você está
+        # referenciando alguma coisa do próprio objeto (sejam eles atributos
+        # ou métodos) - na verdade, o self é o próprio objeto em si.
         """ Método construtor da classe User. Note que
         o primeiro parâmetro deve ser o `self`. Isso é
         uma particularidade de Python, vamos falar mais
