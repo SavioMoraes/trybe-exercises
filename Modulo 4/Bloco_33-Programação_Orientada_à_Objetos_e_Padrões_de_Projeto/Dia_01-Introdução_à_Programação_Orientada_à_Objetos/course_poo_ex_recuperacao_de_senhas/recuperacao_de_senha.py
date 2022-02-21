@@ -10,6 +10,9 @@ class User:  # entidade geral - definimos uma Classe
         self.email = email
         self.password = password
 
+    def reset_password(self):
+        print("Envia email de reset de senha")
+
 
 # Para invocar o método construtor, a sintaxe é:
 # NomeDaClasse(parametro 1, parametro 2)
@@ -23,3 +26,21 @@ print(meu_user)
 print(meu_user.name)
 print(meu_user.email)
 print(meu_user.password)
+
+meu_user.reset_password()
+# Se definimos numa classe uma função, podemos chamar ela
+# a partir do objeto que criamos!
+
+# Quando pedimos para um objeto fazer algo, dizemos que estamos
+# enviando uma mensagem àquele objeto
+
+# # class User:
+# #     # Não preciso saber como a classe funciona, lalalalala
+
+# #     def reset_password(self):
+# #       # A classe tem essa função? Ótimo! Pra mim basta!
+
+
+# # # Já sei o suficiente pra agir!
+# # meu_user = User("Valentino Trocatapa", "valentino@tinytoons.com", "Grana")
+# # meu_user.reset_password()
