@@ -1,3 +1,8 @@
+# Exercício 1: Abaixo temos parte da implementação de um jogo do mundo
+# de Star Wars . Porém esse código está com um erro. Encontre-o e corrija-o,
+# sem alterar o código das classes de personagens ( Soldier e Jedi ).
+
+
 class Soldier:
     def __init__(self, level):
         self.level = level
