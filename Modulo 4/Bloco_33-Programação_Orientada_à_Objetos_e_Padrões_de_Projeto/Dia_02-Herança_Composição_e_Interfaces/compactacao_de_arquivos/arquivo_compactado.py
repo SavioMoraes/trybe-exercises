@@ -39,3 +39,11 @@ class SalesReportJSON(SalesReport):
 class SalesReportCSV(SalesReport):
     # Sua implementação vai aqui
     pass
+
+
+# Para testar
+relatorio_de_vendas = SalesReportJSON('meu_relatorio')
+relatorio_de_vendas.serialize()
+
+# relatorio_de_compras = SalesReportCSV('meu_relatorio')
+# relatorio_de_compras.serialize()
