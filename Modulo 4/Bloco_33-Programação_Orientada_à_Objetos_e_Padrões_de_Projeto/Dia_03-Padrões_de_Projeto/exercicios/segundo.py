@@ -72,4 +72,4 @@ class IteradorDoBaralhoInverso(Iterator):
 
 class BaralhoInverso(Baralho):
     def __iter__(self):
-        
+        pass
