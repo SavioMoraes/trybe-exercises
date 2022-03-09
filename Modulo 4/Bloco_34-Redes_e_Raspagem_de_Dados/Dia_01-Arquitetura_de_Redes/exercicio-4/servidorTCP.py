@@ -23,3 +23,8 @@ if __name__ == "__main__":
     # direitinho quando encerrado
     with TCPServer(ADDRESS, EchoHandler) as server:
         server.serve_forever()
+
+
+# Para funfar, tem rodar o arquivo python: 'python3 servidorTCP.py'
+# e em outro terminal, enviar a mensagem, que irá aparecer no
+# primeiro terminal com o comando python!!!
