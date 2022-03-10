@@ -13,7 +13,7 @@ class TCPHandler(StreamRequestHandler):
             if not data:
                 self.wfile.white(b"Cliente desconectado")
                 break
-        print(data)
+            print(data)
 
 
 server_adrees = ("localhost", 8080)
