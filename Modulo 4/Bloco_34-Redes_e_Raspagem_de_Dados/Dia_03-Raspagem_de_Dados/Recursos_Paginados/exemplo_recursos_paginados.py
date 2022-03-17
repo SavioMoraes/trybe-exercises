@@ -16,6 +16,7 @@ while next_page_url:
         print(title, price)
 
     next_page_url = selector.css(".next a::attr(href)").get()
+    print(next_page_url)
 
 # O título está no atributo title em um elemento âncora (<a>)
 # Dentro de um h3 em elementos que possuem classe product_pod
