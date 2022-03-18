@@ -30,3 +30,4 @@ def binary_search_iterative(array, element):
 
 
 print(binary_search_iterative(data, 2))
+# print(binary_search_iterative(data, 3))
