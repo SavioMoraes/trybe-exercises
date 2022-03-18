@@ -1,4 +1,4 @@
-"""Complexidade Cúbica 0(n³)"""
+"""Complexidade Cúbica O(n³)"""
 
 
 def multiply_arrays(array1, array2, array3):

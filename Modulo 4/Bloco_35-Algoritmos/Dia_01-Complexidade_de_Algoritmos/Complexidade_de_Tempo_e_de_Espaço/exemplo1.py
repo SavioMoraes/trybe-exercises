@@ -11,5 +11,5 @@ def squared_array(numbers):
 # 10, 20, 50, 100, 5, 10, 20, 50, 100, 5, 10, 20, 50, 100, 5, 10, 20,
 # 50, 100]))
 
-# complexidade de tempo: 0(n): linearmente proporcional
-# complexidade de espaço: 0(1): linearmente proporcional
+# complexidade de tempo: O(n): linearmente proporcional
+# complexidade de espaço: O(1): linearmente proporcional

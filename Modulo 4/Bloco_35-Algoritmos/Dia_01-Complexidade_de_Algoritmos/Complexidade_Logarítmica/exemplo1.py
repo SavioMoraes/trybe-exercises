@@ -1,4 +1,4 @@
-"""Complexidade Logatítmica - 0(log n)"""
+"""Complexidade Logatítmica - O(log n)"""
 
 
 # A estrutura deve estar ordenada para que a busca binária funcione:

@@ -8,5 +8,5 @@ def sum_array(numbers):
 
 print(sum_array([3]))
 
-# complexidade de tempo: 0(n): linearmente proporcional
-# complexidade de espaço: 0(1): constante
+# complexidade de tempo: O(n): linearmente proporcional
+# complexidade de espaço: O(1): constante

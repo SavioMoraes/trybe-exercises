@@ -8,5 +8,5 @@ def multiply_array(numbers):
 
 print(multiply_array([9, 7, 8, 11, 13, 17]))
 
-# complexidade de tempo: 0(n): linearmente proporcional
-# complexidade de espaço: 0(1): constante
+# complexidade de tempo: O(n): linearmente proporcional
+# complexidade de espaço: O(1): constante
