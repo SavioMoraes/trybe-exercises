@@ -1,7 +1,7 @@
 """Complexidade Logatítmica - 0(log n)"""
 
 
-# A estrutura deve estar ordenada para que a busca binária funcione
+# A estrutura deve estar ordenada para que a busca binária funcione:
 data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 
@@ -30,4 +30,4 @@ def binary_search_iterative(array, element):
 
 
 print(binary_search_iterative(data, 2))
-# print(binary_search_iterative(data, 3))
+print(binary_search_iterative(data, 3))
