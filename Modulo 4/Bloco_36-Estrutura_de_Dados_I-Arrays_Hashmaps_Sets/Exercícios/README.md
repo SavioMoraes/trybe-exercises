@@ -1,1 +1,1 @@
-Diretório destinado a receber os eercícios do bloco 36.1 :pencil:
+Diretório destinado a resolução dos exercícios do bloco 36.1 :pencil:
