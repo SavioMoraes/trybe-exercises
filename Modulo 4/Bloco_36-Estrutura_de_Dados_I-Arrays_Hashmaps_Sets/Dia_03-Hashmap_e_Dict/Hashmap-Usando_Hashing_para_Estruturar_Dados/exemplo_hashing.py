@@ -34,3 +34,8 @@ if __name__ == "__main__":
         registry.insert(employee)
 
     print(registry.get_value(23))
+    print(employees)
+    print(registry.get_value(14))
+    print(employees)
+    print(registry.get_value(24))  # acessou o mesmo queo 14
+    print(employees)
