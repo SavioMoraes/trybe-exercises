@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # define um array vazio de inteiros
 myarray = np.array([], dtype=int)
 
