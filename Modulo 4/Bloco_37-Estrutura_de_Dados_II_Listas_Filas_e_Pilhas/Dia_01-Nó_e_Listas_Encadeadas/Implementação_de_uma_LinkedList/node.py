@@ -7,6 +7,6 @@ class Node:
         return f"Node(value={self.value}, next={self.next})"
 
 
-# if __name__ == "__main__":
-#     xablau = Node(18)
-#     print(xablau)
+if __name__ == "__main__":
+    xablau = Node(18)
+    print(xablau)
