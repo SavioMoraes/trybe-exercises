@@ -213,9 +213,9 @@ if __name__ == "__main__":
     print(xablau.get_element_at(0))
     print(xablau.get_element_at(1))
     print(xablau.get_element_at(10))
-    # xablau.clear()  # clear apaga tudo, por isso está comentado
     print(xablau)
     print(xablau.index_of(53))
+    xablau.clear()  # clear apaga tudo, por isso está comentado
     print('----------------------------------------------------------')
     print('Exercício 03:')
     xulambs = LinkedList()
