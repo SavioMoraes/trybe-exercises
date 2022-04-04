@@ -1,3 +1,16 @@
+"""
+    Percorra a lista e troque os ponteiros para cada nó.
+    Por fim, atualize o ponteiro para apontar para o
+último nó.
+
+    Exemplo de saída:
+
+ Lista original: 5 -> 4 -> 3 -> 2 -> 1 -> None
+
+ Lista invertida: 1 -> 2 -> 3 -> 4 -> 5 -> None
+"""
+
+
 class Node:
     # Construtor
     def __init__(self, data=None, prev=None, next=None):
