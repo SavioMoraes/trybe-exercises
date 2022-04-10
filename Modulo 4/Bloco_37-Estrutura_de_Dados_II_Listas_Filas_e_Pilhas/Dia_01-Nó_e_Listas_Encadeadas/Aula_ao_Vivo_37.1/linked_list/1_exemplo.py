@@ -2,7 +2,6 @@
 # com o nó principal, retorne o node do meio da lista.
 
 from linked_list import LinkedList
-from rich import print
 
 
 def mid_element(linked_list: LinkedList):
