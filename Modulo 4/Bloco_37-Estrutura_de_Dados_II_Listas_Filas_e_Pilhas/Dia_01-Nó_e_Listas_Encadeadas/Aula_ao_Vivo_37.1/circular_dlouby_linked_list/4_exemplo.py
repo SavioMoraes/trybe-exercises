@@ -1,5 +1,4 @@
 from doubly_node import DoublyNode
-from rich import print
 
 
 class CircularDoublyLinkedList:
