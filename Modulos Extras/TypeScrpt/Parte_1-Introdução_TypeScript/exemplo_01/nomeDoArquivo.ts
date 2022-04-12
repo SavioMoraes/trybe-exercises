@@ -1,5 +1,6 @@
 var nome = 'Sávio'
-
+console.log('Olá mundo, ' + nome);
+var nome = 'Vera';
 console.log('Olá mundo, ' + nome);
 
 
