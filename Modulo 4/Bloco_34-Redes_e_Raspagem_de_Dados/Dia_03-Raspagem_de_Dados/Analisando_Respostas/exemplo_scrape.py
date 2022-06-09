@@ -1,3 +1,6 @@
+# O código busca todos os elementos de umamesma página,
+# retornando título e preço.
+
 from parsel import Selector
 import requests
 

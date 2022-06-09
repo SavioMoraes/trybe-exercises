@@ -2,16 +2,16 @@ from pymongo import MongoClient
 
 # descomentar essas duas próximas linhas para exemplos
 # até o gerenciamento de contexto com 'with'
-# client = MongoClient()
-# db = client.catalogue
+client = MongoClient()
+db = client.catalogue
 
 # book representa um dado obtido na raspagem
 # inserção de um documento (insert)
-# book = {
-#     "title": "A Light in the Attic",
-# }
-# document_id = db.books.insert_one(book).inserted_id
-# print(document_id)
+book = {
+    "title": "A Light in the Attic",
+}
+document_id = db.books.insert_one(book).inserted_id
+print(document_id)
 # client.close()  # fecha a conexão com o banco de dados
 
 # inserção de múltiplos documentos (insert_many)
@@ -39,7 +39,7 @@ from pymongo import MongoClient
 # client.close()
 
 # cliente como gerenciador de contextos (with)
-with MongoClient() as client:
-    db = client.catalogue
-    for book in db.books.find({"title": {"$regex": "t"}}):
-        print(book["title"])
+# with MongoClient() as client:
+#     db = client.catalogue
+#     for book in db.books.find({"title": {"$regex": "t"}}):
+#         print(book["title"])
